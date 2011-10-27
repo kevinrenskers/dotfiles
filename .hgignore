@@ -1,0 +1,12 @@
+syntax: glob
+.DS_Store
+.idea
+
+# virtualenv
+src
+lib
+bin
+include
+.Python
+
+*.pyc

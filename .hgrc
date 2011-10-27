@@ -1,0 +1,23 @@
+[ui]
+username= Kevin Renskers <kevin.renskers@getlogic.nl>
+ignore = ~/.hgignore
+
+[extensions]
+hgext.fetch=
+hgext.extdiff=
+hgext.progress=
+hgext.graphlog=
+
+[diff]
+ignoreblanklines = true
+
+[extdiff]
+cmd.diffmerge = ~/bin/diffmerge.sh
+
+[merge-tools]
+diffmerge.executable = ~/bin/diffmerge.sh
+diffmerge.args = --result=$output -t1="Mercurial" -t2=$output -t3="Local" --caption=$output $local $base $other
+diffmerge.binary = False
+diffmerge.symlinks = False
+diffmerge.gui = True
+diffmerge.premerge = False

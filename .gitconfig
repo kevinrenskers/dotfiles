@@ -1,0 +1,9 @@
+[user]
+	name = Kevin Renskers
+	email = info@bolhoed.net
+
+[github]
+	token = 16a04620f3d7461261b1aa4b4e57e7d4
+	user = kevinrenskers
+[core]
+	excludesfile = /Users/kevin/.gitignore
