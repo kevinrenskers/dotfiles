@@ -28,7 +28,7 @@ $ sudo pip install ipython
 3. Dotfiles
 -----------
 $ cd ~
-$ hg clone https://bitbucket.org/kevinrenskers/dotfiles
+$ git clone git://github.com/kevinrenskers/dotfiles.git
 $ ln -s dotfiles/.bash_profile
 $ ln -s dotfiles/.bashrc
 $ ln -s dotfiles/.hgignore
