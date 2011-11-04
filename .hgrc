@@ -1,5 +1,5 @@
 [ui]
-username= Kevin Renskers <kevin.renskers@getlogic.nl>
+username = Kevin Renskers <kevin.renskers@getlogic.nl>
 ignore = ~/.hgignore
 
 [extensions]
@@ -13,6 +13,8 @@ ignoreblanklines = true
 
 [extdiff]
 cmd.diffmerge = ~/bin/diffmerge.sh
+cmd.sourcetreediff= / Applications/DiffMerge.app/Contents/MacOS/DiffMerge
+opts.sourcetreediff = --nosplash
 
 [merge-tools]
 diffmerge.executable = ~/bin/diffmerge.sh
@@ -21,3 +23,13 @@ diffmerge.binary = False
 diffmerge.symlinks = False
 diffmerge.gui = True
 diffmerge.premerge = False
+sourcetreemerge.gui = False
+sourcetreebulkmerge.gui = False
+sourcetreemerge.binary = False
+sourcetreebulkmerge.executable = /Applications/SourceTree.app/Contents/Resources/hg-merge.sh
+sourcetreemerge.args = --merge --result=$output -t1="Local Version" -t2=$output -t3="Other Version" --caption=$output  $local $base $other
+sourcetreemerge.checkconflicts = True
+sourcetreemerge.premerge = True
+sourcetreemerge.executable = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge
+sourcetreebulkmerge.premerge = False
+sourcetreebulkmerge.binary = True
