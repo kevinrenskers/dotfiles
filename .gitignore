@@ -2,3 +2,4 @@
 .hg
 *.pyc
 .DS_Store*
+env
