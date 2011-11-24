@@ -1,12 +1,13 @@
 syntax: glob
 .DS_Store
-.idea
+.idea/
 
 # virtualenv
-src
-lib
-bin
-include
+src/
+lib/
+bin/
+include/
+env/
 .Python
 
 *.pyc
