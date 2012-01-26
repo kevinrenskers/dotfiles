@@ -25,8 +25,8 @@ $ sudo pip install mercurial
 $ sudo pip install ipython
 
 
-3. Dotfiles
------------
+3. Dotfiles - Please note that you probably want to COPY the files and EDIT them, instead of symlinking
+-------------------------------------------------------------------------------------------------------
 $ cd ~
 $ git clone git://github.com/kevinrenskers/dotfiles.git
 $ ln -s dotfiles/.bash_profile
