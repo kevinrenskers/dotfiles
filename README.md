@@ -4,8 +4,8 @@ This is a list of reproducable steps to get Mac OS X up and running with necessa
 Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in .bashrc.
 
 
-1. Dependencies
----------------
+Step 1. Dependencies
+--------------------
     # install DiffMerge from http://www.sourcegear.com/diffmerge/downloads.php
     # install Xcode from the App Store
     # install HomeBrew and bash-completion:
@@ -13,8 +13,8 @@ Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in 
     $ brew install bash-completion
 
 
-2. Python and Mercurial
------------------------
+Step 2. Python and Mercurial
+----------------------------
     $ brew install giflib
     $ brew install jpeg
     $ sudo easy_install readline
@@ -25,8 +25,8 @@ Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in 
     $ sudo pip install ipython
 
 
-3. Dotfiles - Please note that you probably want to COPY the files and EDIT them, instead of symlinking
--------------------------------------------------------------------------------------------------------
+Step 3. Dotfiles - Please note that you probably want to COPY the files and EDIT them, instead of symlinking
+------------------------------------------------------------------------------------------------------------
     $ cd ~
     $ git clone git://github.com/kevinrenskers/dotfiles.git
     $ ln -s dotfiles/.bash_profile
@@ -43,8 +43,8 @@ Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in 
     $ source .bashrc
 
 
-4. PostgreSQL
--------------
+Step 4. PostgreSQL
+------------------
     $ brew install postgresql
     $ initdb /usr/local/var/postgres
     $ mkdir -p ~/Library/LaunchAgents
@@ -53,18 +53,18 @@ Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in 
     $ sudo pip install psycopg2
 
 
-5. MySQL
---------
+Step 5. MySQL
+-------------
     $ brew install mysql
     $ unset TMPDIR
     $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
     $ cp /usr/local/Cellar/mysql/5.5.14/com.mysql.mysqld.plist ~/Library/LaunchAgents/
-    $ launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist 
+    $ launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
     $ sudo pip install mysql-python
 
 
-6. Node.js and NPM (Node Package Manager)
------------------------------------------
+Step 6. Node.js and NPM (Node Package Manager)
+----------------------------------------------
     $ PREFIX=$(brew --prefix)
     $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
     $ sudo chown -R $USER $PREFIX/{share/man,bin,lib/node,include/node}
@@ -72,22 +72,22 @@ Personally I don't use virtualenvwrapper, but if you do, uncomment the lines in 
     $ curl http://npmjs.org/install.sh | sh
 
 
-7. Coffeescript and Less (requires step 6)
-------------------------------------------
+Step 7. Coffeescript and Less (requires step 6)
+-----------------------------------------------
     $ npm install -g coffee-script
     $ npm install -g less
 
 
-8. Ruby and rvm (Ruby Version Manager)
---------------------------------------
+Step 8. Ruby and rvm (Ruby Version Manager)
+-------------------------------------------
     $ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
     $ source .bashrc
     $ rvm install 1.9.2
     $ rvm --default use 1.9.2
 
 
-9. Optional Ruby packages (requires step 8)
--------------------------------------------
+Step 9. Optional Ruby packages (requires step 8)
+------------------------------------------------
     $ gem install rails
     $ gem install sass
     $ gem install sinatra
