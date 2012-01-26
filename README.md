@@ -25,8 +25,10 @@ Step 2. Python and Mercurial
     $ sudo pip install ipython
 
 
-Step 3. Dotfiles - Please note that you probably want to COPY the files and EDIT them, instead of symlinking
-------------------------------------------------------------------------------------------------------------
+Step 3. Dotfiles
+----------------
+**Please note that you probably want to COPY the files and EDIT them, instead of symlinking**
+
     $ cd ~
     $ git clone git://github.com/kevinrenskers/dotfiles.git
     $ ln -s dotfiles/.bash_profile
