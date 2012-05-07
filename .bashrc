@@ -4,12 +4,16 @@ alias ...="cd ..; cd .."
 alias cd..="cd .."
 alias l="ls -lahp"
 alias rmpyc='find . -name "*.pyc" -print0|xargs -0 rm'
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # exports
 export ARCHFLAGS='-arch x86_64'
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PATH=/usr/local/bin:$HOME/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
+
+# enable the Library folder
+chflags nohidden ~/Library
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -114,7 +118,7 @@ bind "set show-all-if-ambiguous on" # show list automatically, without double ta
 
 # set the prompt
 function prompt {
-    export PS1="$BLUE\$(__vcs_name)$NO_COLOUR\u@\h: $BLUE\w$NO_COLOUR $ "
+    export PS1="\[\033[G\]$BLUE\$(__vcs_name)$NO_COLOUR\u@\h: $BLUE\w$NO_COLOUR $ "
 }
 
 prompt
