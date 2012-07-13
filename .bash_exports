@@ -1,7 +1,6 @@
-# Make nano the default editor (don't hate me...)
-export EDITOR=nano
-export GIT_EDITOR=nano
-export PAGER=less
+# Make vim the default editor
+export EDITOR=vim
+export GIT_EDITOR=vim
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"

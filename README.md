@@ -34,7 +34,11 @@ My `~/.bash_extra` looks something like this:
     export ARCHFLAGS='-arch x86_64'
     export PATH=/usr/local/bin:~/bin:$PATH
     export NODE_PATH=/usr/local/lib/node_modules
-
+    
+    # Make nano the default editor (don't hate me...)
+    export EDITOR=nano
+    export GIT_EDITOR=nano
+    
     # Git credentials
     # Not in the repository, to prevent people from accidentally committing under my name
     GIT_AUTHOR_NAME="Kevin Renskers"
