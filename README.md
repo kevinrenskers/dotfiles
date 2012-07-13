@@ -7,7 +7,7 @@ This is a list of reproducable steps to get Mac OS X up and running with necessa
 ### Using Git and the bootstrap script
 You can clone the repository wherever you want. The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
-    git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && ./bootstrap.sh
+    git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
 To update, `cd` into your local `dotfiles` repository and then:
 
@@ -114,5 +114,5 @@ When setting up a new Mac, you may want to install some sensible Mac OS X defaul
     $ gem install sinatra
 
 
-# Thanks to...
+## Thanks to...
 * Mathias Bynens for sharing [his dotfiles](https://github.com/mathiasbynens/dotfiles), bootstrap script and installation instructions.
