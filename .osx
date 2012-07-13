@@ -184,12 +184,6 @@ defaults write com.apple.addressbook ABShowDebugMenu -bool true
 # Enable the debug menu in iCal
 defaults write com.apple.iCal IncludeDebugMenu -bool true
 
-# Make the iTunes arrow links go to your library instead of the iTunes Store
-defaults write com.apple.iTunes invertStoreLinks -bool true
-
-# Disable the iTunes arrow links completely
-defaults write com.apple.iTunes show-store-arrow-links -bool false
-
 # Disable the Ping sidebar in iTunes
 defaults write com.apple.iTunes disablePingSidebar -bool true
 
