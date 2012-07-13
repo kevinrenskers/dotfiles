@@ -1,0 +1,13 @@
+# Make nano the default editor (don't hate me...)
+export EDITOR=nano
+export GIT_EDITOR=nano
+export PAGER=less
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"

@@ -1,5 +1,4 @@
 [ui]
-username = Kevin Renskers <kevin.renskers@getlogic.nl>
 ignore = ~/.hgignore
 
 [extensions]
@@ -12,17 +11,10 @@ hgext.graphlog=
 ignoreblanklines = true
 
 [extdiff]
-cmd.diffmerge = ~/bin/diffmerge.sh
 cmd.sourcetreediff= / Applications/DiffMerge.app/Contents/MacOS/DiffMerge
 opts.sourcetreediff = --nosplash
 
 [merge-tools]
-diffmerge.executable = ~/bin/diffmerge.sh
-diffmerge.args = --result=$output -t1="Mercurial" -t2=$output -t3="Local" --caption=$output $local $base $other
-diffmerge.binary = False
-diffmerge.symlinks = False
-diffmerge.gui = True
-diffmerge.premerge = False
 sourcetreemerge.gui = False
 sourcetreebulkmerge.gui = False
 sourcetreemerge.binary = False
