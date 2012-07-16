@@ -1,6 +1,3 @@
-# Compiled Python files
-*.pyc
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -14,4 +11,32 @@ Thumbs.db
 .Trashes
 
 # Mercurial
-.hg
+/.hg/*
+*/.hg/*
+
+# Xcode
+build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+
+# Python
+*.py[cod]
+pip-log.txt
+
+# IntelliJ / PyCharm
+*.iml
+*.ipr
+*.iws
+.idea/
