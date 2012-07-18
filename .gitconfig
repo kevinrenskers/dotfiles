@@ -3,6 +3,8 @@
 	l = log --pretty=oneline -n 20 --graph
 	# View the current working tree status using the short format
 	s = status -s
+	# View status using the long format
+	st = status
 	# Diff
 	d = diff --patch-with-stat
 	# Pull in remote changes for the current repository and all its submodules
@@ -21,7 +23,6 @@
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
-
 
 [core]
 	excludesfile = ~/.gitignore
