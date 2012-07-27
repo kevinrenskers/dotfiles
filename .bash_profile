@@ -42,5 +42,5 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     source `brew --prefix`/etc/bash_completion
 fi
 
-# load RVM (ruby version manager)
+# Load RVM (ruby version manager)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -3,64 +3,19 @@
 This is a list of reproducable steps to get Mac OS X up and running with necessary development tools. Personally I don't use virtualenvwrapper, but if you do, uncomment the corresponding lines in .bashrc.
 
 
-## Step 1. Dotfiles
-### Using Git and the bootstrap script
-You can clone the repository wherever you want. The bootstrapper script will pull in the latest version and copy the files to your home folder.
-
-    git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
-
-To update, `cd` into your local `dotfiles` repository and then:
-
-    ./bootstrap.sh
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-    ./bootstrap.sh -f
-
-### Git-free install
-To install these dotfiles without Git:
-
-    cd; curl -#L https://github.com/kevinrenskers/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh}
-
-To update later on, just run that command again.
-
-### Add custom commands without creating a new fork
-
-If `~/.bash_extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
-
-My `~/.bash_extra` looks something like this:
-
-    # PATH additions
-    export ARCHFLAGS='-arch x86_64'
-    export PATH=/usr/local/bin:~/bin:$PATH
-    export NODE_PATH=/usr/local/lib/node_modules
-    
-    # Make nano the default editor (don't hate me...)
-    export EDITOR=nano
-    export GIT_EDITOR=nano
-    
-    # Git credentials
-    # Not in the repository, to prevent people from accidentally committing under my name
-    GIT_AUTHOR_NAME="Kevin Renskers"
-    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-    git config --global user.name "$GIT_AUTHOR_NAME"
-    GIT_AUTHOR_EMAIL="info@mixedcase.nl"
-    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-    git config --global user.email "$GIT_AUTHOR_EMAIL"
-
-
-## Step 2. Setup Mac OS X
+## Step 1. Setup Mac OS X
     # 1. install Xcode from the App Store
-    # 2. install SourceTree from the App Store
-    # 2. install HomeBrew:
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
-    # 3. Install bash completion:
+    # 2. open Xcode's preferences and install the command line tools package (this will also install Git)
+    # 3. install SourceTree from the App Store
+    # 4. install HomeBrew:
+    $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+    # 5. Install bash completion:
     $ brew install bash-completion
-    # 4. install http://coderwall.com/p/dlithw
+    # 6. install http://coderwall.com/p/dlithw
 
-When setting up a new Mac, you may want to install some sensible Mac OS X defaults:
 
-    $ . .osx
+## Step 2. Dotfiles and default settings
+See the file INSTALL.md for dotfile installation instructions.
 
 
 ## Step 3. Python and Mercurial
@@ -106,8 +61,7 @@ When setting up a new Mac, you may want to install some sensible Mac OS X defaul
 
 
 ## Step 8. Ruby and rvm (Ruby Version Manager)
-    $ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-    $ source .bashrc
+    $ curl -L https://get.rvm.io | bash -s stable --ruby
     $ rvm install 1.9.2
     $ rvm --default use 1.9.2
 

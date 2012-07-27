@@ -1,2 +1,5 @@
 # Disable the startup message
 startup_message off
+
+# using RVM inside GNU screen (https://rvm.io/workflow/screen/)
+shell -${SHELL}
