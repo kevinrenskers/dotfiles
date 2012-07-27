@@ -12,6 +12,7 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
     # 5. Install bash completion:
     $ brew install bash-completion
     # 6. install http://coderwall.com/p/dlithw
+    # 7. install http://www.starryhope.com/keyfixer/
 
 
 ## Step 2. Dotfiles and default settings
