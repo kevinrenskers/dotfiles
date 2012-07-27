@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducable steps to get Mac OS X up and running with necessary development tools. Personally I don't use virtualenvwrapper, but if you do, uncomment the corresponding lines in .bashrc.
+This is a list of reproducible steps to get Mac OS X up and running with necessary development tools.
 
 
 ## Step 1. Setup Mac OS X
