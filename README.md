@@ -71,6 +71,7 @@ See the file INSTALL.md for dotfile installation instructions.
     $ gem install rails
     $ gem install sass
     $ gem install sinatra
+    $ gem install cocoapods
 
 
 ## Thanks to...
