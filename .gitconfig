@@ -1,6 +1,8 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
+	# Log with more info
+	lg = log --color --graph -n 20 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	# View the current working tree status using the short format
 	s = status -s
 	# View status using the long format
@@ -17,12 +19,17 @@
 	go = checkout -B
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
+	# Tags sorted by date
+	t = for-each-ref --sort=-taggerdate --format='%(refname:short)' refs/tags
 	branches = branch -a
 	remotes = remote -v
 	# Credit an author on the latest commit
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	previoustag = !sh -c 'git t --count 2 | cut -f2 | sed -n 2p'
+	markdownlog = log --color --pretty=format:'* %s `%Cred%h%Creset` - %C(bold blue)[%an](mailto:%ae)%Creset' --abbrev-commit --dense --no-merges --reverse
+	releasenotes = !sh -c 'git markdownlog ...`git previoustag`'
 
 [core]
 	excludesfile = ~/.gitignore
