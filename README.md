@@ -63,8 +63,11 @@ See the file INSTALL.md for dotfile installation instructions.
 
 ## Step 8. Ruby and rvm (Ruby Version Manager)
     $ curl -L https://get.rvm.io | bash -s stable --ruby
-    $ rvm install 1.9.2
-    $ rvm --default use 1.9.2
+    $ brew tap homebrew/dupes
+    $ brew install autoconf automake apple-gcc42 libksba
+    $ rvm pkg install openssl
+    $ rvm install 1.9.3
+    $ rvm --default use 1.9.3
 
 
 ## Step 9. Optional: ruby packages (requires step 8)
