@@ -53,7 +53,7 @@ See the file INSTALL.md for dotfile installation instructions.
     $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
     $ sudo chown -R $USER $PREFIX/{share/man,bin,lib/node,include/node}
     $ brew install node
-    $ curl http://npmjs.org/install.sh | sh
+    $ curl https://npmjs.org/install.sh | sh
 
 
 ## Step 7. Optional: coffeescript and Less (requires step 6)
