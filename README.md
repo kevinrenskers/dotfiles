@@ -4,15 +4,14 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 
 
 ## Step 1. Setup Mac OS X
-    # 1. install Xcode from the App Store
-    # 2. open Xcode's preferences and install the command line tools package (this will also install Git)
-    # 3. install SourceTree from the App Store
-    # 4. install HomeBrew:
-    $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-    # 5. Install bash completion:
-    $ brew install bash-completion
-    # 6. install http://coderwall.com/p/dlithw
-    # 7. install http://www.starryhope.com/keyfixer/
+1. install Xcode from the App Store
+2. open Xcode's preferences and install the command line tools package (this will also install Git)
+3. install HomeBrew:  
+   `$ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"`
+4. Install bash completion:  
+   `$ brew install bash-completion`
+5. install http://coderwall.com/p/dlithw
+6. install http://www.starryhope.com/keyfixer/
 
 
 ## Step 2. Dotfiles and default settings
