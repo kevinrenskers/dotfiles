@@ -7,7 +7,7 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 1. install Xcode from the App Store
 2. open Xcode's preferences and install the command line tools package (this will also install Git)
 3. install HomeBrew:  
-   `$ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"`
+   `$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 4. Install bash completion:  
    `$ brew install bash-completion`
 5. install http://coderwall.com/p/dlithw
