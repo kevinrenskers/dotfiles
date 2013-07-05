@@ -3,7 +3,7 @@
 This is a list of reproducible steps to get Mac OS X up and running with necessary development tools.
 
 
-## Step 1. Setup Mac OS X
+## Step 1. Setup Mac OS X.
 
 1. install Xcode from the App Store
 2. open Xcode's preferences and install the command line tools package (this will also install Git)
@@ -16,10 +16,12 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 
 
 ## Step 2. Dotfiles and default settings
-See the file INSTALL.md for dotfile installation instructions.
+See the file INSTALL.md for dotfile installation instructions. On a fresh Mac you might want to run the `.osx` file.
 
 
-## Python
+## Step 3. Anything else you need.
+
+### Python
 
     $ brew install giflib jpeg
     $ sudo easy_install readline
@@ -28,7 +30,7 @@ See the file INSTALL.md for dotfile installation instructions.
     $ sudo pip install PIL
     
     
-## Ruby and RVM (Ruby Version Manager)
+### Ruby and RVM (Ruby Version Manager)
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
     # This will install Ruby 2.0.0. If we want to stay with 1.9.3:
@@ -36,12 +38,12 @@ See the file INSTALL.md for dotfile installation instructions.
     $ rvm --default use 1.9.3
 
 
-## Ruby packages
+### Ruby packages (install RVM first)
 
     $ gem install cocoapods
 
 
-## PostgreSQL
+### PostgreSQL
 
     $ brew install postgresql
     $ initdb /usr/local/var/postgres
@@ -51,7 +53,7 @@ See the file INSTALL.md for dotfile installation instructions.
     $ sudo pip install psycopg2
 
 
-## MySQL
+### MySQL
 
     $ brew install mysql
     $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
@@ -63,7 +65,7 @@ See the file INSTALL.md for dotfile installation instructions.
 For use with PHP, edit `/etc/php.ini` and replace `mysql.default_socket = /var/mysql/mysql.sock` with `default_socket = /tmp/mysql.sock`
 
 
-## Node.js and NPM (Node Package Manager)
+### Node.js and NPM (Node Package Manager)
 
     $ PREFIX=$(brew --prefix)
     $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
@@ -72,7 +74,7 @@ For use with PHP, edit `/etc/php.ini` and replace `mysql.default_socket = /var/m
     $ curl https://npmjs.org/install.sh | sh
 
 
-## NPM packages (requires NPM)
+### NPM packages (install NPM first)
 
     $ npm install -g coffee-script
     $ npm install -g less
