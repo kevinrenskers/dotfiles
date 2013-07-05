@@ -19,16 +19,29 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 See the file INSTALL.md for dotfile installation instructions.
 
 
-## Step 3. Python
+## Python
 
     $ brew install giflib jpeg
     $ sudo easy_install readline
     $ sudo easy_install pip
     $ sudo pip install virtualenv
     $ sudo pip install PIL
+    
+    
+## Ruby and RVM (Ruby Version Manager)
+
+    $ curl -L https://get.rvm.io | bash -s stable --ruby
+    # This will install Ruby 2.0.0. If we want to stay with 1.9.3:
+    $ rvm install 1.9.3
+    $ rvm --default use 1.9.3
 
 
-## Step 4. PostgreSQL
+## Ruby packages
+
+    $ gem install cocoapods
+
+
+## PostgreSQL
 
     $ brew install postgresql
     $ initdb /usr/local/var/postgres
@@ -38,7 +51,7 @@ See the file INSTALL.md for dotfile installation instructions.
     $ sudo pip install psycopg2
 
 
-## Step 5. MySQL
+## MySQL
 
     $ brew install mysql
     $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
@@ -50,7 +63,7 @@ See the file INSTALL.md for dotfile installation instructions.
 For use with PHP, edit `/etc/php.ini` and replace `mysql.default_socket = /var/mysql/mysql.sock` with `default_socket = /tmp/mysql.sock`
 
 
-## Step 6. Node.js and NPM (Node Package Manager)
+## Node.js and NPM (Node Package Manager)
 
     $ PREFIX=$(brew --prefix)
     $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
@@ -59,28 +72,11 @@ For use with PHP, edit `/etc/php.ini` and replace `mysql.default_socket = /var/m
     $ curl https://npmjs.org/install.sh | sh
 
 
-## Step 7. Optional: coffeescript and Less (requires step 6)
+## NPM packages (requires NPM)
 
     $ npm install -g coffee-script
     $ npm install -g less
 
-
-## Step 8. Ruby and rvm (Ruby Version Manager)
-
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
-    $ brew tap homebrew/dupes
-    $ brew install autoconf automake apple-gcc42 libksba
-    $ rvm pkg install openssl
-    $ rvm install 1.9.3
-    $ rvm --default use 1.9.3
-
-
-## Step 9. Optional: ruby packages (requires step 8)
-
-    $ gem install rails
-    $ gem install sass
-    $ gem install sinatra
-    $ gem install cocoapods
 
 
 ## Thanks to...
