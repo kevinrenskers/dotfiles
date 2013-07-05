@@ -4,6 +4,7 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 
 
 ## Step 1. Setup Mac OS X
+
 1. install Xcode from the App Store
 2. open Xcode's preferences and install the command line tools package (this will also install Git)
 3. install HomeBrew:  
@@ -18,18 +19,17 @@ This is a list of reproducible steps to get Mac OS X up and running with necessa
 See the file INSTALL.md for dotfile installation instructions.
 
 
-## Step 3. Python and Mercurial
-    $ brew install giflib
-    $ brew install jpeg
+## Step 3. Python
+
+    $ brew install giflib jpeg
     $ sudo easy_install readline
     $ sudo easy_install pip
     $ sudo pip install virtualenv
     $ sudo pip install PIL
-    $ sudo pip install mercurial
-    $ sudo pip install ipython
 
 
 ## Step 4. PostgreSQL
+
     $ brew install postgresql
     $ initdb /usr/local/var/postgres
     $ mkdir -p ~/Library/LaunchAgents
@@ -39,15 +39,19 @@ See the file INSTALL.md for dotfile installation instructions.
 
 
 ## Step 5. MySQL
+
     $ brew install mysql
+    $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
     $ unset TMPDIR
     $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-    $ cp /usr/local/Cellar/mysql/5.5.14/com.mysql.mysqld.plist ~/Library/LaunchAgents/
-    $ launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
-    $ sudo pip install mysql-python
+    $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    $ /usr/local/opt/mysql/bin/mysqladmin -u root password 'new-password'
+    
+For use with PHP, edit `/etc/php.ini` and replace `mysql.default_socket = /var/mysql/mysql.sock` with `default_socket = /tmp/mysql.sock`
 
 
 ## Step 6. Node.js and NPM (Node Package Manager)
+
     $ PREFIX=$(brew --prefix)
     $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
     $ sudo chown -R $USER $PREFIX/{share/man,bin,lib/node,include/node}
@@ -56,11 +60,13 @@ See the file INSTALL.md for dotfile installation instructions.
 
 
 ## Step 7. Optional: coffeescript and Less (requires step 6)
+
     $ npm install -g coffee-script
     $ npm install -g less
 
 
 ## Step 8. Ruby and rvm (Ruby Version Manager)
+
     $ curl -L https://get.rvm.io | bash -s stable --ruby
     $ brew tap homebrew/dupes
     $ brew install autoconf automake apple-gcc42 libksba
@@ -70,6 +76,7 @@ See the file INSTALL.md for dotfile installation instructions.
 
 
 ## Step 9. Optional: ruby packages (requires step 8)
+
     $ gem install rails
     $ gem install sass
     $ gem install sinatra
