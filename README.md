@@ -64,6 +64,9 @@ Once RVM is installed you can install your favorite packages:
     $ mkdir -p ~/Library/LaunchAgents
     $ cp /usr/local/Cellar/postgresql/9.0.4/org.postgresql.postgres.plist ~/Library/LaunchAgents/
     $ launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+
+To use with Python:
+
     $ sudo pip install psycopg2
 
 
@@ -75,6 +78,10 @@ Once RVM is installed you can install your favorite packages:
     $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
     $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
     $ /usr/local/opt/mysql/bin/mysqladmin -u root password 'new-password'
+    
+To use with Python:
+
+    $ sudo pip install mysql-python
     
 For use with PHP, edit `/etc/php.ini` (possible named `/etc/php.ini.default`) and replace `mysql.default_socket = /var/mysql/mysql.sock` with `default_socket = /tmp/mysql.sock`
 
