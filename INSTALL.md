@@ -28,7 +28,7 @@ My `~/.bash_extra` looks something like this:
 
     # PATH additions
     export ARCHFLAGS='-arch x86_64'
-    export PATH=/usr/local/bin:~/bin:$PATH
+    export PATH=/usr/local/sbin:/usr/local/bin:~/bin:$PATH
     export NODE_PATH=/usr/local/lib/node_modules
     
     # Make nano the default editor (don't hate me...)

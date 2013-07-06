@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get Mac OS X up and running with necessary development tools. Tested on Mountain Lion.
+This is a list of reproducible steps to get a clean Mac up and running with a bunch of development tools. Tested on OS X 10.8 (Mountain Lion).
 
 
 ## Step 1: prepare Mac OS X
@@ -29,7 +29,7 @@ Restart your shell after it's done.
 Read the INSTALL.md file for more detailed instructions and tips.
 
 
-## Step 4: anything else you need *(optional)*
+## Step 4: anything else you need
 
 ### Python
 
@@ -77,13 +77,12 @@ To use with Python:
     $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
     $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
     $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-    $ /usr/local/opt/mysql/bin/mysqladmin -u root password 'new-password'
+    $ mysql_secure_installation
+    $ sudo cp $(brew --prefix mysql)/support-files/my-default.cnf /etc/my.cnf
     
 To use with Python:
 
     $ sudo pip install mysql-python
-    
-For use with PHP, edit `/etc/php.ini` (possible named `/etc/php.ini.default`) and replace `mysql.default_socket = /var/mysql/mysql.sock` with `default_socket = /tmp/mysql.sock`
 
 
 ### Node.js and NPM (Node Package Manager)
@@ -98,6 +97,31 @@ Once NPM is installed you can install your favorite packages:
 
     $ npm install -g coffee-script
     $ npm install -g less
+
+
+### Nginx
+
+    $ brew install nginx
+    $ sudo ln -sfv /usr/local/opt/nginx/*.plist /Library/LaunchAgents
+    $ sudo mkdir /var/log/nginx/
+    # edit /usr/local/etc/nginx/nginx.conf, change port to 80 and error_log to /var/log/nginx/error.log
+    $ sudo nginx
+    $ open http://127.0.0.1
+
+PHP:
+
+    $ brew tap josegonzalez/homebrew-php
+    $ brew tap homebrew/dupes
+    $ brew install php55 --with-mysql --with-fpm
+    $ ln -sfv /usr/local/opt/php55/*.plist ~/Library/LaunchAgents
+    $ launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
+
+Config files:
+
+    `/usr/local/etc/nginx/nginx.conf`
+    `/usr/local/etc/php/5.5/php-fpm.conf`
+    `/usr/local/etc/php/5.5/php.ini`
+
 
 
 ## Thanks to...
