@@ -12,7 +12,7 @@ This is a list of reproducible steps to get a clean Mac up and running with a bu
 5. On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults *(optional)*
 
 
-## Step 2: install Homebrew and the bash-completion package
+## Step 2: install Homebrew and bash-completion
 
     $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
     $ brew install bash-completion
@@ -24,9 +24,7 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
 
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
     
-Restart your shell after it's done.
-    
-Read the INSTALL.md file for more detailed instructions and tips.
+**Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
 
 
 ## Step 4: anything else you need
@@ -46,7 +44,7 @@ Read the INSTALL.md file for more detailed instructions and tips.
     
 Ignore the instructions to insert the rvm script into your bash profile - if you installed my dotfiles, that's already included.
     
-Restart your shell after it's done and test with `ruby --version`, it should have installed version 2.x. If you want to stay on Ruby 1.9.3, run these commands after restarting your shell:
+**Restart your shell after it's done** and test with `ruby --version`, it should have installed version 2.x. If you want to stay on Ruby 1.9.3, run these commands after restarting your shell:
 
     $ rvm install 1.9.3
     $ rvm --default use 1.9.3
@@ -108,7 +106,11 @@ Once NPM is installed you can install your favorite packages:
     $ sudo nginx
     $ open http://127.0.0.1
 
-PHP:
+Config file:
+
+    /usr/local/etc/nginx/nginx.conf
+
+### PHP-FPM
 
     $ brew tap josegonzalez/homebrew-php
     $ brew tap homebrew/dupes
@@ -118,9 +120,8 @@ PHP:
 
 Config files:
 
-    `/usr/local/etc/nginx/nginx.conf`
-    `/usr/local/etc/php/5.5/php-fpm.conf`
-    `/usr/local/etc/php/5.5/php.ini`
+    /usr/local/etc/php/5.5/php-fpm.conf
+    /usr/local/etc/php/5.5/php.ini
 
 
 
