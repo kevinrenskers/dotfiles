@@ -82,6 +82,10 @@ To use with Python:
 
     $ sudo pip install mysql-python
 
+Starting and stopping the server:
+
+    $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    $ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 ### Node.js and NPM (Node Package Manager)
 
@@ -102,13 +106,19 @@ Once NPM is installed you can install your favorite packages:
     $ brew install nginx
     $ sudo ln -sfv /usr/local/opt/nginx/*.plist /Library/LaunchAgents
     $ sudo mkdir /var/log/nginx/
-    # edit /usr/local/etc/nginx/nginx.conf, change port to 80 and error_log to /var/log/nginx/error.log
+
+Edit `/usr/local/etc/nginx/nginx.conf`, change port to 80 and error_log to `/var/log/nginx/error.log`. Then start the server:
+
     $ sudo nginx
-    $ open http://127.0.0.1
 
 Config file:
 
     /usr/local/etc/nginx/nginx.conf
+
+Other commands:
+
+    $ sudo nginx -s stop
+    $ sudo nginx -s reload
 
 ### PHP-FPM
 
@@ -131,6 +141,11 @@ Config files:
 
     /usr/local/etc/php/5.5/php-fpm.conf
     /usr/local/etc/php/5.5/php.ini
+
+Starting and stopping the server:
+
+    $ launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
+    $ launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
 
 
 
