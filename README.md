@@ -81,6 +81,10 @@ To use with Python:
 To use with Python:
 
     $ sudo pip install mysql-python
+    
+Config file:
+    
+    /usr/local/Cellar/mysql/5.6.12/my.cnf
 
 Starting and stopping the server:
 
