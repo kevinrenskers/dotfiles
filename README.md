@@ -118,6 +118,15 @@ Config file:
     $ ln -sfv /usr/local/opt/php55/*.plist ~/Library/LaunchAgents
     $ launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist
 
+Example Nginx config (place in `server` directive):
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        include        fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
 Config files:
 
     /usr/local/etc/php/5.5/php-fpm.conf
