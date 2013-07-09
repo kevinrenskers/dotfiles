@@ -15,7 +15,6 @@ This is a list of reproducible steps to get a clean Mac up and running with a bu
 ## Step 2: install Homebrew and bash-completion
 
     $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-    $ brew install bash-completion
 
 To update Homebrew itself:
 
@@ -26,6 +25,7 @@ To update Homebrew itself:
 
 The dotfiles setup everything from your bash prompt and handy git aliases to new shortcut commands like `localip` and `rmds`.
 
+    $ brew install bash-completion
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
     
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
