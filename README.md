@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with a bunch of development tools. Tested on OS X 10.8 (Mountain Lion).
+This is a list of reproducible steps to get a clean Mac up and running with a bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
 
 
 ## Step 1: prepare Mac OS X
@@ -12,7 +12,7 @@ This is a list of reproducible steps to get a clean Mac up and running with a bu
 5. On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults *(optional)*
 
 
-## Step 2: install Homebrew and bash-completion
+## Step 2: install Homebrew
 
     $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
