@@ -26,10 +26,7 @@ If `~/.bash_extra` exists, it will be sourced along with the other files. You ca
 
 My `~/.bash_extra` looks something like this:
 
-    # PATH additions
     export ARCHFLAGS='-arch x86_64'
-    export PATH=/usr/local/sbin:/usr/local/bin:~/bin:$PATH
-    export NODE_PATH=/usr/local/lib/node_modules
     
     # Make nano the default editor (don't hate me...)
     export EDITOR=nano

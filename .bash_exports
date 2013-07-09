@@ -11,5 +11,8 @@ export LESS_TERMCAP_md="$ORANGE"
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
-# RVM path
-export PATH=$PATH:$HOME/.rvm/bin
+# Path additions
+export PATH=/usr/local/sbin:/usr/local/bin:~/bin:~/.rvm/bin:$PATH
+
+# Node path
+export NODE_PATH=/usr/local/lib/node_modules

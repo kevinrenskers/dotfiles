@@ -17,6 +17,10 @@ This is a list of reproducible steps to get a clean Mac up and running with a bu
     $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
     $ brew install bash-completion
 
+To update Homebrew itself:
+
+    $ brew update
+
 
 ## Step 3: install the dotfiles
 
@@ -38,7 +42,7 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
     $ sudo pip install PIL
     
     
-### Ruby and RVM (Ruby Version Manager)
+### Ruby, RVM (Ruby Version Manager) and RubyGems
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
     
@@ -53,6 +57,14 @@ Once RVM is installed you can install your favorite packages:
 
     $ gem install cocoapods
     $ gem install rails
+
+To update RVM itself:
+
+    $ rvm get stable
+
+To update RubyGems itself:
+
+    $ gem update --system
 
 
 ### PostgreSQL
@@ -91,11 +103,9 @@ Starting and stopping the server:
     $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
     $ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
+
 ### Node.js and NPM (Node Package Manager)
 
-    $ PREFIX=$(brew --prefix)
-    $ sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
-    $ sudo chown -R $USER $PREFIX/{share/man,bin,lib/node,include/node}
     $ brew install node
     $ curl https://npmjs.org/install.sh | sh
 
@@ -103,6 +113,10 @@ Once NPM is installed you can install your favorite packages:
 
     $ npm install -g coffee-script
     $ npm install -g less
+
+To update NPM itself:
+
+    $ npm install npm -g
 
 
 ### Nginx
