@@ -48,7 +48,7 @@ On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnoster theme.
 
 1. install and use the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized)
-2. use the Menlo-Powerline font (automatically installed to your system in step 3b)
+2. use the [Menlo-Powerline font](https://github.com/Lokaltog/powerline-fonts) (note: already automatically installed to your system in step 3b)
 
 
 ## Step 4: native apps
