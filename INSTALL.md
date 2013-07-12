@@ -22,26 +22,16 @@ To update later on, just run that command again.
 
 ## Add custom commands without creating a new fork
 
-If `~/.bash_extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
-My `~/.bash_extra` looks something like this:
+My `~/.extra` looks something like this:
 
     export ARCHFLAGS='-arch x86_64'
-    
+
     # Make nano the default editor (don't hate me...)
     export EDITOR=nano
     export GIT_EDITOR=nano
-    
+
     # Git credentials
-    # Not in the repository, to prevent people from accidentally committing under my name
-    GIT_AUTHOR_NAME="Kevin Renskers"
-    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-    git config --global user.name "$GIT_AUTHOR_NAME"
-    GIT_AUTHOR_EMAIL="info@mixedcase.nl"
-    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-    git config --global user.email "$GIT_AUTHOR_EMAIL"
-
-## Install defaults
-When setting up a new Mac, you may want to install some sensible Mac OS X defaults:
-
-    $ . .osx
+    git config --global user.name "Kevin Renskers"
+    git config --global user.email "info@mixedcase.nl"

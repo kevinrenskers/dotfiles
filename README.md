@@ -20,6 +20,25 @@ To update Homebrew itself:
 
     $ brew update
 
+### Install (non-App Store) native apps via Homebrew
+
+    $ brew tap phinze/homebrew-cask
+    $ brew install brew-cask
+    $ brew cask install dropbox
+    $ brew cask install iterm2
+    $ brew cask install google-chrome
+    $ brew cask install firefox
+    $ brew cask install sublime-text
+    $ brew cask install the-unarchiver
+    $ brew cask install transmission
+    $ brew cask install bartender
+    $ brew cask install mplayerx
+    $ brew cask install one-password
+    $ brew cask install pycharm
+    $ brew cask install phpstorm
+    $ brew cask install steam
+    $ brew cask install base
+
 
 ## Step 3: install the dotfiles
 
@@ -29,6 +48,10 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
     
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
+
+### Using ZSH?
+
+    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 
 ## Step 4: anything else you need

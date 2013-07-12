@@ -14,4 +14,4 @@ else
 	fi
 fi
 unset doIt
-source ~/.bash_profile
+echo "Start a new terminal"
