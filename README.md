@@ -37,8 +37,6 @@ I'm using oh-my-zsh with the [agnostic theme](https://github.com/robbyrussell/oh
 
 ## Step 3b: install the dotfiles
 
-The dotfiles setup everything from your bash prompt and handy git aliases to new shortcut commands like `localip` and `rmds`.
-
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
@@ -47,10 +45,10 @@ On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
 ## Step 3c: setup iTerm2 for ZSH
-If you're using ZSH and the included .zshrc file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnostic theme.
+If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnostic theme.
 
 1. install and use the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized)
-2. use the Menlo-Powerline font
+2. use the Menlo-Powerline font (automatically installed to your system in step 3b)
 
 
 ## Step 4: native apps
