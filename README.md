@@ -76,6 +76,7 @@ Then to install the apps into /Applications:
     $ brew cask install phpstorm
     $ brew cask install steam
     $ brew cask install base
+    $ brew cask install skype
 
 
 ## Step 5: anything else you need
