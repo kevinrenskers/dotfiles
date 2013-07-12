@@ -19,25 +19,6 @@ To update Homebrew itself:
 
     $ brew update
 
-### Install (non-App Store) native apps via Homebrew
-
-    $ brew tap phinze/homebrew-cask
-    $ brew install brew-cask
-    $ brew cask install dropbox
-    $ brew cask install iterm2
-    $ brew cask install google-chrome
-    $ brew cask install firefox
-    $ brew cask install sublime-text
-    $ brew cask install the-unarchiver
-    $ brew cask install transmission
-    $ brew cask install bartender
-    $ brew cask install mplayerx
-    $ brew cask install one-password
-    $ brew cask install pycharm
-    $ brew cask install phpstorm
-    $ brew cask install steam
-    $ brew cask install base
-
 
 ## Step 3: install the dotfiles
 
@@ -46,10 +27,14 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
     $ brew install bash-completion
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
-Extra step if you use ZSH:
+Extra steps if you use ZSH:
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    
+
+To get the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) to work:
+1. install the powerline fonts from https://github.com/Lokaltog/powerline-fonts/tree/master/Menlo
+2. install the Solarized Dark colorscheme in iTerm2 or OS X Terminal from http://ethanschoonover.com/solarized
+
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
 
 On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
