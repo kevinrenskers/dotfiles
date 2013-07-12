@@ -2,6 +2,8 @@
 
 This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
 
+![Agnostic theme](agnostic.png)
+
 
 ## Step 1: prepare Mac OS X
 
