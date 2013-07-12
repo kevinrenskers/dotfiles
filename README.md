@@ -20,19 +20,14 @@ To update Homebrew itself:
     $ brew update
 
 
-## Step 3: install the dotfiles
+## Step 3a: install dotfiles dependencies
 
-The dotfiles setup everything from your bash prompt and handy git aliases to new shortcut commands like `localip` and `rmds`.
+**For Bash:**
 
     $ brew install bash-completion
-    $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
-    * [EXTRA STEPS FOR ZSH, see below]
 
-**Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
-
-On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
-
-### Extra steps if you use ZSH:
+**For ZSH:**
+I'm using oh-my-zsh with the agnostic theme.
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
@@ -40,6 +35,17 @@ To get the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Theme
 
 1. install the powerline fonts from https://github.com/Lokaltog/powerline-fonts/tree/master/Menlo
 2. install the Solarized Dark colorscheme in iTerm2 or OS X Terminal from http://ethanschoonover.com/solarized
+
+
+## Step 3b: install the dotfiles
+
+The dotfiles setup everything from your bash prompt and handy git aliases to new shortcut commands like `localip` and `rmds`.
+
+    $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
+
+**Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
+
+On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
 ## Step 4: anything else you need
