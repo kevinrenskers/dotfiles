@@ -22,11 +22,11 @@ To update Homebrew itself:
 
 ## Step 3a: install dotfiles dependencies
 
-**For Bash:**
+### For Bash
 
     $ brew install bash-completion
 
-**For ZSH:**
+### For ZSH
 I'm using oh-my-zsh with the agnostic theme.
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
