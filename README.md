@@ -2,7 +2,7 @@
 
 This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
 
-![Agnostic theme](agnostic.png)
+![Agnostic theme](agnoster.png)
 
 
 ## Step 1: prepare Mac OS X
@@ -30,7 +30,7 @@ To update Homebrew itself:
 
 ### For ZSH
 
-I'm using oh-my-zsh with the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
+I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
@@ -45,7 +45,7 @@ On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
 ## Step 3c: setup iTerm2 for ZSH
-If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnostic theme.
+If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnoster theme.
 
 1. install and use the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized)
 2. use the Menlo-Powerline font (automatically installed to your system in step 3b)
