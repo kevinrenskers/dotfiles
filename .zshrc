@@ -40,19 +40,9 @@ plugins=(git brew Forklift gem npm pip rvm django)
 
 source $ZSH/oh-my-zsh.sh
 
-# Aliasses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
-# Path additions
-export PATH=/usr/local/sbin:/usr/local/bin:~/.rvm/bin:$PATH
-
-# Node path
-export NODE_PATH=/usr/local/lib/node_modules
-
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-# Extras
-[[ -r "$HOME/.extra" ]] && source "$HOME/.extra"
+# Aliases and extras
+[ -r "$HOME/.aliases" ] && source "$HOME/.aliases"
+[ -r "$HOME/.extra" ] && source "$HOME/.extra"

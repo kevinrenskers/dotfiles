@@ -2,7 +2,8 @@
 cd "$(dirname "$0")"
 git pull
 function doIt() {
-	rsync --exclude ".osx" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "INSTALL.md" --exclude "agnostic.png" -av . ~
+	rsync --exclude ".osx" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "INSTALL.md" --exclude "agnostic.png" -av --no-perms . ~
+    echo "!!! Start a new terminal session !!!"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
@@ -14,4 +15,3 @@ else
 	fi
 fi
 unset doIt
-echo "Start a new terminal"

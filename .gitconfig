@@ -63,3 +63,6 @@
 
 [merge]
         log = true
+
+[push]
+	default = matching

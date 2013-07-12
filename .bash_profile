@@ -1,6 +1,6 @@
-# Load ~/.bash_prompt, ~/.bash_exports, ~/.bash_aliases, ~/.bash_functions and ~/extra
+# Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.bash_functions and ~/.extra
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{bash_prompt,bash_exports,bash_aliases,bash_functions,extra}; do
+for file in ~/.{bash_prompt,exports,aliases,bash_functions,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
