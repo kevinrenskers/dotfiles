@@ -50,7 +50,35 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
 On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
-## Step 4: anything else you need
+## Step 4: native apps
+
+To install native app using Homebrew:
+
+If you're not using my dotfiles or didn't restart your terminal session yet, you probably want to run this command first:
+
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+Then to install the apps into /Applications:
+
+    $ brew tap phinze/homebrew-cask
+    $ brew install brew-cask
+    $ brew cask install dropbox
+    $ brew cask install one-password
+    $ brew cask install iterm2
+    $ brew cask install google-chrome
+    $ brew cask install firefox
+    $ brew cask install sublime-text
+    $ brew cask install the-unarchiver
+    $ brew cask install transmission
+    $ brew cask install bartender
+    $ brew cask install mplayerx
+    $ brew cask install pycharm
+    $ brew cask install phpstorm
+    $ brew cask install steam
+    $ brew cask install base
+
+
+## Step 5: anything else you need
 
 ### Python
 
