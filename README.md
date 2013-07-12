@@ -29,6 +29,7 @@ To update Homebrew itself:
     $ brew install bash-completion
 
 ### For ZSH
+
 I'm using oh-my-zsh with the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -51,8 +52,7 @@ On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
 ## Step 4: native apps
-
-To install native app using Homebrew:
+Installing native (non-Mac App Store) app using Homebrew.
 
 If you're not using my dotfiles or didn't restart your terminal session yet, you probably want to run this command first:
 
