@@ -29,14 +29,14 @@ To update Homebrew itself:
     $ brew install bash-completion
 
 ### For ZSH
-I'm using oh-my-zsh with the agnostic theme.
+I'm using oh-my-zsh with the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-To get the [agnostic theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) to work:
+To get the agnostic theme to work:
 
-1. install the powerline fonts from https://github.com/Lokaltog/powerline-fonts/tree/master/Menlo
-2. install the Solarized Dark colorscheme in iTerm2 or OS X Terminal from http://ethanschoonover.com/solarized
+1. install the [powerline fonts](https://github.com/Lokaltog/powerline-fonts/tree/master/Menlo)
+2. install the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized) in iTerm2 or OS X Terminal
 
 
 ## Step 3b: install the dotfiles
