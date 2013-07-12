@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with a bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
+This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
 
 
 ## Step 1: prepare Mac OS X
@@ -9,7 +9,6 @@ This is a list of reproducible steps to get a clean Mac up and running with a bu
 2. Open Xcode's preferences and install the command line tools package (this will also install Git)
 3. Install http://coderwall.com/p/dlithw *(optional)*
 4. Install http://www.starryhope.com/keyfixer/ *(optional)*
-5. On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults *(optional)*
 
 
 ## Step 2: install Homebrew
@@ -46,12 +45,14 @@ The dotfiles setup everything from your bash prompt and handy git aliases to new
 
     $ brew install bash-completion
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
+
+Extra step if you use ZSH:
+
+    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
     
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
 
-### Using ZSH?
-
-    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
 ## Step 4: anything else you need
