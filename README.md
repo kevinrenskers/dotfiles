@@ -74,6 +74,7 @@ Then to install the apps into /Applications:
     $ brew cask install mplayerx
     $ brew cask install pycharm
     $ brew cask install phpstorm
+    $ brew cask install sequel-pro
     $ brew cask install steam
     $ brew cask install base
     $ brew cask install skype

@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-# Aliases and extras
+# Aliases, exports and extras
 [ -r "$HOME/.aliases" ] && source "$HOME/.aliases"
+[ -r "$HOME/.exports" ] && source "$HOME/.exports"
 [ -r "$HOME/.extra" ] && source "$HOME/.extra"
