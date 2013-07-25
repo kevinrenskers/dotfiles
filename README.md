@@ -8,7 +8,7 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 ## Step 1: prepare Mac OS X
 
 1. Install Xcode from the App Store
-2. Open Xcode's preferences and install the command line tools package (this will also install Git)
+2. Open Xcode's preferences and install the command line tools package (this will also install Git) (on OS X Mavericks you need to run `xcode-select --install` instead)
 3. Install http://coderwall.com/p/dlithw *(optional)*
 4. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
