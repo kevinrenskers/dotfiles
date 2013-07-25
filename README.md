@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
+This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
 
 ![Agnoster theme](agnoster.png)
 
@@ -22,20 +22,22 @@ To update Homebrew itself:
     $ brew update
 
 
-## Step 3a: install dotfiles dependencies
+## Step 3: dotfiles
 
-### For Bash
+### 3a: install dotfiles dependencies
+
+#### For Bash
 
     $ brew install bash-completion
 
-### For ZSH
+#### For ZSH
 
 I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
     $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 
-## Step 3b: install the dotfiles
+### 3b: install the dotfiles
 
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
@@ -44,7 +46,7 @@ I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh
 On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
 
 
-## Step 3c: setup iTerm2 for ZSH
+### Step 3c: setup iTerm2 for ZSH
 If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnoster theme.
 
 1. install and use the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized)
