@@ -85,7 +85,7 @@ Then to install the apps into /Applications:
 ## Step 5: anything else you need
 
 ### Python
-I'm using Homebrew's Python because it's newer and comes with pip and setuptools.
+I'm using [Homebrew's Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) because it's newer and comes with pip and setuptools.
 
     $ brew install python giflib jpeg
     $ pip install wheel virtualenv PIL
