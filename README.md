@@ -85,12 +85,18 @@ Then to install the apps into /Applications:
 ## Step 5: anything else you need
 
 ### Python
+I'm using Homebrew's Python because it's newer and comes with pip and setuptools.
 
-    $ brew install giflib jpeg
-    $ sudo easy_install readline
-    $ sudo easy_install pip
-    $ sudo pip install virtualenv
-    $ sudo pip install PIL
+    $ brew install python giflib jpeg
+    $ pip install wheel virtualenv PIL
+
+Upgrade pip itself:
+
+    $ pip install --upgrade pip
+
+To upgrade setuptools, which is used by pip:
+
+    $ pip install --upgrade setuptools
     
     
 ### Ruby, RVM (Ruby Version Manager) and RubyGems
