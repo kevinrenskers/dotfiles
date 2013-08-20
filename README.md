@@ -97,6 +97,8 @@ Upgrade pip itself:
 To upgrade setuptools, which is used by pip:
 
     $ pip install --upgrade setuptools
+
+*note: ZSH trying to correct `pip` to `.pip` for you? Run `hash -rf` to fix this.*
     
     
 ### Ruby, RVM (Ruby Version Manager) and RubyGems
