@@ -35,3 +35,12 @@ My `~/.extra` looks something like this:
     # Git credentials
     git config --global user.name "Kevin Renskers"
     git config --global user.email "info@mixedcase.nl"
+
+    # Configure Agnoster theme
+    DEFAULT_USER='kevin'
+
+    # ZSH syntax highlighting
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    
+    # Show the ~/Library folder
+    chflags nohidden ~/Library
