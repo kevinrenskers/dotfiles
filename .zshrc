@@ -47,3 +47,6 @@ source $ZSH/oh-my-zsh.sh
 [ -r "$HOME/.aliases" ] && source "$HOME/.aliases"
 [ -r "$HOME/.exports" ] && source "$HOME/.exports"
 [ -r "$HOME/.extra" ] && source "$HOME/.extra"
+
+# ZSH syntax highlighting
+[ -r "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

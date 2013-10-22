@@ -38,9 +38,6 @@ My `~/.extra` looks something like this:
 
     # Configure Agnoster theme
     DEFAULT_USER='kevin'
-
-    # ZSH syntax highlighting (install via brew zsh-syntax-highlighting)
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     
     # Show the ~/Library folder
     chflags nohidden ~/Library
