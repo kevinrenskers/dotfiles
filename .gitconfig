@@ -35,7 +35,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
-	pager = cat
+	pager = less -F -X
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
