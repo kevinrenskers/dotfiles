@@ -88,7 +88,7 @@ Then to install the apps into /Applications:
 I'm using [Homebrew's Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) because it's newer and comes with pip and setuptools.
 
     $ brew install python giflib jpeg
-    $ pip install wheel virtualenv PIL
+    $ pip install wheel virtualenvwrapper PIL
 
 Upgrade pip itself:
 
