@@ -41,7 +41,7 @@ plugins=(git brew Forklift gem npm pip rvm django virtualenv vagrant pod virtual
 source $ZSH/oh-my-zsh.sh
 
 # RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
 # Aliases, exports and extras
 [ -r "$HOME/.aliases" ] && source "$HOME/.aliases"
