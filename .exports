@@ -19,3 +19,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
