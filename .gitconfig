@@ -1,37 +1,57 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
+
 	# Log with more info
 	lg = log --color --graph -n 20 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
 	# View the current working tree status using the short format
 	s = status -s
+
 	# View status using the long format
 	st = status
+
 	# Diff
 	d = diff --patch-with-stat
+
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
+
 	# Clone a repository including all submodules
 	c = clone --recursive
+
 	# Commit all changes
 	ca = !git add -A && git commit -av
+
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
+
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
+
 	# Tags sorted by date
 	t = for-each-ref --sort=-taggerdate --format='%(refname:short)' refs/tags
+
 	branches = branch -a
 	remotes = remote -v
+
 	# Credit an author on the latest commit
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+
+	# More tag related stuff
 	previoustag = !sh -c 'git t --count 2 | cut -f2 | sed -n 2p'
 	markdownlog = log --color --pretty=format:'* %s `%Cred%h%Creset` - %C(bold blue)[%an](mailto:%ae)%Creset' --abbrev-commit --dense --no-merges --reverse
 	markdownlogtag = !sh -c 'git markdownlog ...`git previoustag`'
 	hockeylog = log --pretty=format:'* %s [%an]' --abbrev-commit --dense --no-merges --reverse
 	hockeylogtag = !sh -c 'git hockeylog ...`git previoustag`'
+
+	# search for a specific line of code in all commits in the repo.
+	# Example: to find when the line "constraint=someMethod," was commented out, use:
+	# git search '#constraint=someMethod,'
+	search = "!f() { git log -S$1 --pretty=oneline --abbrev-commit; }; f"
 
 [core]
 	excludesfile = ~/.gitignore
