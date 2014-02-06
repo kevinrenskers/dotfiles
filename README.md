@@ -67,19 +67,6 @@ Then to install the apps into /Applications:
     $ brew cask install dropbox
     $ brew cask install one-password
     $ brew cask install iterm2
-    $ brew cask install google-chrome
-    $ brew cask install firefox
-    $ brew cask install sublime-text
-    $ brew cask install the-unarchiver
-    $ brew cask install transmission
-    $ brew cask install bartender
-    $ brew cask install mplayerx
-    $ brew cask install pycharm
-    $ brew cask install phpstorm
-    $ brew cask install sequel-pro
-    $ brew cask install steam
-    $ brew cask install base
-    $ brew cask install skype
 
 
 ## Step 5: anything else you need
@@ -165,16 +152,11 @@ Starting and stopping the server:
 ### Node.js and NPM (Node Package Manager)
 
     $ brew install node
-    $ curl https://npmjs.org/install.sh | sh
 
 Once NPM is installed you can install your favorite packages:
 
     $ npm install -g coffee-script
     $ npm install -g less
-
-To update NPM itself:
-
-    $ npm install npm -g
 
 
 ### Nginx
