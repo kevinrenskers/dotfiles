@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9-dp2 (Mavericks).
+This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9 (Mavericks).
 
 ![Agnoster theme](agnoster.png)
 

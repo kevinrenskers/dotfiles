@@ -36,8 +36,5 @@ My `~/.extra` looks something like this:
     git config --global user.name "Kevin Renskers"
     git config --global user.email "info@mixedcase.nl"
 
-    # Configure Agnoster theme
-    DEFAULT_USER='kevin'
-    
     # Show the ~/Library folder
     chflags nohidden ~/Library

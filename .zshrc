@@ -36,7 +36,8 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew Forklift gem npm pip rvm django virtualenv vagrant pod virtualenvwrapper)
+# Suggestion: place this in ~/.extra
+plugins=(git brew gem npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
 [ -r "$HOME/.aliases" ] && source "$HOME/.aliases"
 [ -r "$HOME/.exports" ] && source "$HOME/.exports"
 [ -r "$HOME/.extra" ] && source "$HOME/.extra"
+[ -r "$HOME/.zshextra" ] && source "$HOME/.zshextra"
 
 # ZSH syntax highlighting
 [ -r "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
