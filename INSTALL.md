@@ -38,3 +38,8 @@ My `~/.extra` looks something like this:
 
     # Show the ~/Library folder
     chflags nohidden ~/Library
+
+Please note that `~/.extra` is loaded by both Bash and ZSH. If you have ZSH specific things, put them in `~/.zshextra`. Mine looks like this:
+
+    plugins=(git brew gem npm pip rvm django virtualenv pod virtualenvwrapper bower)
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
