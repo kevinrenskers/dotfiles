@@ -1,6 +1,4 @@
 # Install the dotfiles
-
-## Using Git and the bootstrap script
 You can clone the repository wherever you want. The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
     git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
@@ -13,7 +11,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 
     ./bootstrap.sh -f
 
-## Add custom commands without creating a new fork
+# Add custom commands without creating a new fork
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
 My `~/.extra` looks something like this:
