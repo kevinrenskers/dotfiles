@@ -13,15 +13,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 
     ./bootstrap.sh -f
 
-## Git-free install
-To install these dotfiles without Git:
-
-    cd; curl -#L https://github.com/kevinrenskers/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={INSTALL.md,README.md,bootstrap.sh}
-
-To update later on, just run that command again.
-
 ## Add custom commands without creating a new fork
-
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
 My `~/.extra` looks something like this:
