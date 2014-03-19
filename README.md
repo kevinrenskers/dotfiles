@@ -151,7 +151,8 @@ Starting and stopping the server:
 
 ### Node.js and NPM (Node Package Manager)
 
-    $ brew install node
+    $ brew install node --without-npm
+    $ curl -L https://npmjs.org/install.sh | sh
 
 Once NPM is installed you can install your favorite packages:
 
