@@ -15,7 +15,7 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 
 ## Step 2: install Homebrew
 
-    $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 To update Homebrew itself:
 
