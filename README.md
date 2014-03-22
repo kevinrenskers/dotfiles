@@ -34,7 +34,7 @@ To update Homebrew itself:
 
 I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
-    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+    $ curl -L http://install.ohmyz.sh | sh
 
 
 ### 3b: install the dotfiles
