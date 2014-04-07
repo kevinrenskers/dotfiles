@@ -210,7 +210,6 @@ Starting and stopping the server:
 ### LaunchRocket
 [LaunchRocket](https://github.com/jimbojsb/launchrocket) is a Mac PreferencePane for managing services with launchd. It's pretty handy for MySQL, PHP-FPM, Nginx, etc.
 
-    $ brew tap jimbojsb/launchrocket
     $ brew cask install launchrocket
 
 
