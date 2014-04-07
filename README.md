@@ -122,6 +122,8 @@ To update RubyGems itself:
 
 To use with Python:
 
+    $ export CFLAGS=-Qunused-arguments
+    $ export CPPFLAGS=-Qunused-arguments
     $ sudo pip install psycopg2
 
 
