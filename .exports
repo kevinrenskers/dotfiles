@@ -12,7 +12,7 @@ export LESS_TERMCAP_md="$ORANGE"
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # Path additions
-export PATH=/usr/local/sbin:/usr/local/bin:~/.rvm/bin:$PATH
+export PATH=~/.rvm/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 # Node path
 export NODE_PATH=/usr/local/lib/node_modules
