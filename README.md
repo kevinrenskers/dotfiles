@@ -11,7 +11,6 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 2. Open Xcode's preferences and install the command line tools package (this will also install Git) (on OS X Mavericks you need to run `xcode-select --install` instead)
 3. Install http://coderwall.com/p/dlithw *(optional)*
 4. Install http://www.starryhope.com/keyfixer/ *(optional)*
-5. Run `brew install trash && alias rm='trash'` *(optional)*
 
 
 ## Step 2: install Homebrew
@@ -21,6 +20,10 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 To update Homebrew itself:
 
     $ brew update
+    
+A very handy first install:
+
+    $ brew install trash && alias rm='trash'
 
 
 ## Step 3: dotfiles
@@ -55,7 +58,7 @@ If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2
 
 
 ## Step 4: native apps
-Installing native (non-Mac App Store) app using Homebrew.
+Installing native (non-Mac App Store) apps using Homebrew.
 
 If you're not using my dotfiles or didn't restart your terminal session yet, you probably want to run this command first:
 
