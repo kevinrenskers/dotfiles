@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.8 (Mountain Lion) and 10.9 (Mavericks).
+This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.9 (Mavericks) and 10.10 (Yosemite).
 
 ![Agnoster theme](agnoster.png)
 
@@ -11,6 +11,7 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 2. Open Xcode's preferences and install the command line tools package (this will also install Git) (on OS X Mavericks you need to run `xcode-select --install` instead)
 3. Install http://coderwall.com/p/dlithw *(optional)*
 4. Install http://www.starryhope.com/keyfixer/ *(optional)*
+5. Run `brew install trash && alias rm='trash'` *(optional)*
 
 
 ## Step 2: install Homebrew
