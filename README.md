@@ -66,8 +66,7 @@ If you're not using my dotfiles or didn't restart your terminal session yet, you
 
 Then to install the apps into /Applications:
 
-    $ brew tap phinze/homebrew-cask
-    $ brew install brew-cask
+    $ brew install caskroom/cask/brew-cask
     $ brew cask install dropbox
     $ brew cask install one-password
     $ brew cask install iterm2
@@ -215,8 +214,7 @@ Starting and stopping the server:
 ### LaunchRocket
 [LaunchRocket](https://github.com/jimbojsb/launchrocket) is a Mac PreferencePane for managing services with launchd. It's pretty handy for MySQL, PHP-FPM, Nginx, etc.
 
-    $ brew tap phinze/homebrew-cask
-    $ brew install brew-cask
+    $ brew install caskroom/cask/brew-cask
     $ brew cask install launchrocket
 
 
