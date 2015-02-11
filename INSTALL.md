@@ -24,7 +24,7 @@ My `~/.extra` looks something like this:
 
     # Git credentials
     git config --global user.name "Kevin Renskers"
-    git config --global user.email "info@mixedcase.nl"
+    git config --global user.email "kevin@mixedcase.nl"
 
     # Show the ~/Library folder
     chflags nohidden ~/Library
