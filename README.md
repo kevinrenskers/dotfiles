@@ -161,7 +161,11 @@ Starting and stopping the server:
 Once this is installed you can install your favorite packages:
 
     $ npm install -g coffee-script
-    $ npm install -g less
+    $ npm install less --save
+    
+To update NPM:
+
+    $ npm install npm -g
 
 
 ### Nginx
