@@ -24,6 +24,10 @@ To update Homebrew itself:
 A very handy first install:
 
     $ brew install trash && alias rm='trash'
+    
+To update all installed packages:
+
+    $ brew upgrade --all
 
 
 ## Step 3: dotfiles
