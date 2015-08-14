@@ -48,6 +48,10 @@ I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh
 ### 3b: install the dotfiles
 
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
+    
+### 3c: set your default shell
+
+    $ chsh -s /bin/zsh
 
 **Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
 
