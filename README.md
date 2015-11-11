@@ -137,6 +137,8 @@ To use with Python:
     $ export CPPFLAGS=-Qunused-arguments
     $ sudo pip install psycopg2
 
+Or simply download Postgress.app from http://postgresapp.com.
+
 
 ### MySQL
 
