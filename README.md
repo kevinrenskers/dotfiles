@@ -143,25 +143,17 @@ Or simply download Postgress.app from http://postgresapp.com.
 ### MySQL
 
     $ brew install mysql
-    $ unset TMPDIR
-    $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-    $ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
-    $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    $ brew services start mysql
     $ mysql_secure_installation
-    $ sudo cp $(brew --prefix mysql)/support-files/my-default.cnf /etc/my.cnf
     
 To use with Python:
 
     $ sudo pip install mysql-python
     
-Config file:
-    
-    /usr/local/Cellar/mysql/5.6.12/my.cnf
+Manually Starting and stopping the server:
 
-Starting and stopping the server:
-
-    $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-    $ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    $ mysql.server start
+    $ mysql.server start
 
 
 ### Node.js and NPM (Node Package Manager)
