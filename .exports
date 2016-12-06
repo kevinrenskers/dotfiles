@@ -17,6 +17,11 @@ export PATH=~/.rvm/bin:/usr/local/sbin:/usr/local/bin:$PATH
 # Node path
 export NODE_PATH=/usr/local/lib/node_modules
 
+# Yarn global packages
+if [ -f /usr/local/bin/yarn ]; then
+  export PATH="$PATH:`yarn global bin`"
+fi
+
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
