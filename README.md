@@ -9,8 +9,7 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 
 1. Install Xcode from the App Store
 2. Open Xcode's preferences and install the command line tools package (this will also install Git) (on OS X Mavericks you need to run `xcode-select --install` instead)
-3. Install http://coderwall.com/p/dlithw *(optional)*
-4. Install http://www.starryhope.com/keyfixer/ *(optional)*
+3. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
 
 ## Step 2: install Homebrew
@@ -21,13 +20,14 @@ To update Homebrew itself:
 
     $ brew update
     
-A very handy first install:
+Very handy first installs:
 
     $ brew install trash && alias rm='trash'
+    $ brew cask install qlstephen
     
 To update all installed packages:
 
-    $ brew upgrade --all
+    $ brew upgrade
 
 
 ## Step 3: dotfiles
