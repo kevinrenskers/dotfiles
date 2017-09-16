@@ -42,7 +42,7 @@ To update all installed packages:
 
 I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
 
-    $ curl -L http://install.ohmyz.sh | sh
+    $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 ### 3b: install the dotfiles
