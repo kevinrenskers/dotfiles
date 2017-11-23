@@ -1,19 +1,19 @@
-#!/bin/bash
-cd "$(dirname "$0")"
-git pull
-function doIt() {
-	rsync --exclude "fonts/" --exclude ".osx" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "screenshot.png" -av --no-perms . ~
-	rsync --exclude ".DS_Store" -av --no-perms fonts/ ~/Library/Fonts/
-	mkdir -p ~/.pip/wheels
-	echo "!!! Start a new terminal session !!!"
-}
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-	echo
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt
-	fi
-fi
-unset doIt
+#! /usr/bin/env sh
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `setup.sh` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+DIR=$(dirname "$0")
+cd "$DIR"
+
+# Package control must be executed first in order for the rest to work
+echo "./packages/setup.sh"
+./packages/setup.sh
+
+find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
+    echo "./$setup"
+    ./$setup -chsh
+done
