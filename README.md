@@ -1,83 +1,56 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Bash and ZSH, plus a whole bunch of apps and development tools. Tested on OS X 10.9 (Mavericks) and 10.10 (Yosemite).
+This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Fish, plus a whole bunch of apps and development tools.
 
-![Agnoster theme](agnoster.png)
+![Fish theme](screenshot.png)
 
 
 ## Step 1: prepare Mac OS X
 
 1. Install Xcode from the App Store
-2. Open Xcode's preferences and install the command line tools package (this will also install Git) (on OS X Mavericks you need to run `xcode-select --install` instead)
+2. Install the command line tools package with `xcode-select --install`
 3. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
+Set your git credentials:
+
+    git config --global user.name "Kevin Renskers"
+    git config --global user.email "kevin@loopwerk.io"
 
 ## Step 2: install Homebrew
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-To update Homebrew itself:
+Very handy first install:
 
-    $ brew update
-    
-Very handy first installs:
+    $ brew cask install qlstephen    
 
-    $ brew install trash && alias rm='trash'
-    $ brew cask install qlstephen
-    
 To update all installed packages:
 
+    $ brew update  
     $ brew upgrade
+    $ brew cleanup
 
 
-## Step 3: dotfiles
+## Step 3: install Fish shell
 
-### 3a: install dotfiles dependencies
-
-#### For Bash
-
-    $ brew install bash-completion
-
-#### For ZSH
-
-I'm using oh-my-zsh with the [agnoster theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes).
-
-    $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    brew install fish
 
 
-### 3b: install the dotfiles
+## Step 4: dotfiles
+
+Install the dotfiles
 
     $ git clone https://github.com/kevinrenskers/dotfiles.git && cd dotfiles && ./bootstrap.sh
-    
-### 3c: set your default shell
 
-    $ chsh -s /bin/zsh
+And set your default shell to Fish:
 
-**Restart your shell after it's done.** Read the `INSTALL.md` file for more detailed instructions and tips.
+    $ chsh -s /usr/local/bin/fish
 
-On a fresh Mac you might want to run `$ . .osx` to setup some sensible defaults.
+**Restart your shell after it's done.** 
 
+You can now run `fish_config` to change the terminal colors, abbreviations, etc.
 
-### Step 3c: setup iTerm2 for ZSH
-If you're using ZSH and the included `.zshrc` file, you need to configure iTerm2 (or the standard Terminal.app) to work with the agnoster theme.
-
-1. install and use the [Solarized Dark colorscheme](http://ethanschoonover.com/solarized)
-2. use the [Menlo-Powerline font](https://github.com/Lokaltog/powerline-fonts) (note: already automatically installed to your system in step 3b)
-
-
-## Step 4: native apps
-Installing native (non-Mac App Store) apps using Homebrew.
-
-If you're not using my dotfiles or didn't restart your terminal session yet, you probably want to run this command first:
-
-    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-Then to install the apps into /Applications:
-
-    $ brew install caskroom/cask/brew-cask
-    $ brew cask install dropbox
-    $ brew cask install one-password
-    $ brew cask install iterm2
+On a fresh Mac you might want to run `. .osx` to setup some sensible defaults.
 
 
 ## Step 5: anything else you need
@@ -96,13 +69,11 @@ To upgrade setuptools, which is used by pip:
 
     $ pip install --upgrade setuptools
 
-*note: ZSH trying to correct `pip` to `.pip` for you? Run `hash -rf` to fix this.*
-    
-    
+
 ### Ruby, RVM (Ruby Version Manager) and RubyGems
 
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
-    
+    $ curl -L https://get.rvm.io | bash -s stable --ruby    
+
 Ignore the instructions to insert the rvm script into your bash profile - if you installed my dotfiles, that's already included.
     
 **Restart your shell after it's done** and test with `ruby --version`, it should have installed version 2.x. If you want to stay on Ruby 1.9.3, run these commands after restarting your shell:
@@ -145,11 +116,11 @@ Or simply download Postgress.app from http://postgresapp.com.
     $ brew install mysql
     $ brew services start mysql
     $ mysql_secure_installation
-    
+
 To use with Python:
 
     $ sudo pip install mysql-python
-    
+
 Manually Starting and stopping the server:
 
     $ mysql.server start
@@ -164,7 +135,7 @@ Once this is installed you can install your favorite packages:
 
     $ npm install -g coffee-script
     $ npm install less --save
-    
+
 To update NPM:
 
     $ npm install npm -g
