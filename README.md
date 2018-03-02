@@ -38,17 +38,17 @@ You can now run `fish_config` to change the terminal colors, abbreviations, etc.
 ## Step 4: anything else you need
 
 ### Python
-I'm using [Homebrew's Python](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) because it's newer and comes with pip and setuptools.
+I'm using [Homebrew's Python](https://docs.brew.sh/Homebrew-and-Python.html).
 
-    $ brew install python giflib jpeg
-    $ pip install wheel virtualenvwrapper PIL
+    $ brew install python
 
-Upgrade pip itself:
+A great package to install:
+
+    $ pip install git-up
+
+Upgrade pip or setuptools itself:
 
     $ pip install --upgrade pip
-
-To upgrade setuptools, which is used by pip:
-
     $ pip install --upgrade setuptools
 
 
