@@ -9,7 +9,8 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 
 1. Install Xcode from the App Store, open it, let it install additional tools
 2. Install the command line tools package with `xcode-select --install`
-3. Install http://www.starryhope.com/keyfixer/ *(optional)*
+3. Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+4. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
 Set your git credentials:
 
@@ -123,4 +124,4 @@ Other commands:
 ## Thanks to...
 * Mathias Bynens for sharing [his dotfiles](https://github.com/mathiasbynens/dotfiles), bootstrap script and installation instructions.
 * Michael Moyle for his Nginx/PHP-FPM [installation instructions](http://michaelmoyle.blogspot.com/2013/01/install-php-with-nginx-and-php-fpm.html).
-* Rosco Kalis for sharing [hit dotfile](https://github.com/rkalis/dotfiles)
+* Rosco Kalis for sharing [hit dotfiles](https://github.com/rkalis/dotfiles)
