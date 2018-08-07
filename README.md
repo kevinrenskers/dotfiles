@@ -47,12 +47,12 @@ I'm using [Homebrew's Python](https://docs.brew.sh/Homebrew-and-Python.html).
 
 A great package to install:
 
-    $ pip install git-up
+    $ pip3 install git-up
 
 Upgrade pip or setuptools itself:
 
-    $ pip install --upgrade pip
-    $ pip install --upgrade setuptools
+    $ pip3 install --upgrade pip
+    $ pip3 install --upgrade setuptools
 
 
 ### PostgreSQL
