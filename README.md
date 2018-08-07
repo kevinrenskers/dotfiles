@@ -7,19 +7,21 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 
 ## Step 1: prepare Mac OS X
 
-1. Install Xcode from the App Store
+1. Install Xcode from the App Store, open it, let it install additional tools
 2. Install the command line tools package with `xcode-select --install`
 3. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
 Set your git credentials:
 
-    git config --global user.name "Kevin Renskers"
-    git config --global user.email "kevin@loopwerk.io"
+    $ git config --global user.name "Kevin Renskers"
+    $ git config --global user.email "kevin@loopwerk.io"
 
 
-## Step 2: install Homebrew
+## Step 2: install Homebrew and required packages
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ brew analytics off
+    $ brew install coreutils
 
 
 ## Step 3: dotfiles
