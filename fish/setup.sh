@@ -19,10 +19,7 @@ find * -name "*.fish" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-# Run setup
-fish -c "setup"
-
 if [ "$1" == "-chsh" ]; then
     sudo bash -c "echo /usr/local/bin/fish >> /etc/shells"
-    sudo chsh -s /usr/local/bin/fish
+    chsh -s /usr/local/bin/fish
 fi
