@@ -1,32 +1,27 @@
 # Mac OS X setup
-
 This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Fish, plus a whole bunch of apps and development tools.
 
 ![Fish theme](screenshot.png)
 
 
-## Step 1: prepare Mac OS X
-
-1. Install Xcode from the App Store, open it, let it install additional tools
-2. Install the command line tools package with `xcode-select --install`
-3. Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-4. Install http://www.starryhope.com/keyfixer/ *(optional)*
+## Step 1: ssh keys
+Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
 
-## Step 2: install Homebrew and required packages
+## Step 2: install Homebrew and git
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     $ brew analytics off
-    $ brew install coreutils
+    $ brew install git
 
+Alternatively, instead of installing git from Homebrew, you can also install Xcode from the App Store.
 
 ## Step 3: dotfiles
-
 Clone this repository
 
     $ git clone git@github.com:kevinrenskers/dotfiles.git
 
-And run the `bootstrap.sh` script.
+And run the `bootstrap.sh` script. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything.
 
 **Restart your shell after it's done.** 
 
@@ -39,6 +34,9 @@ Don't forget to set your git credentials, or you'll be using my details which ar
 
 
 ## Step 4: anything else you need
+
+### Keyfixer
+[This tool](http://www.starryhope.com/keyfixer/) makes the Home and End keys on your full keyboard a lot better.
 
 ### Python
 I'm using [Homebrew's Python](https://docs.brew.sh/Homebrew-and-Python.html).
