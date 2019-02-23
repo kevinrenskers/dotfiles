@@ -12,11 +12,6 @@ This is a list of reproducible steps to get a clean Mac up and running with nice
 3. Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 4. Install http://www.starryhope.com/keyfixer/ *(optional)*
 
-Set your git credentials:
-
-    $ git config --global user.name "Kevin Renskers"
-    $ git config --global user.email "kevin@loopwerk.io"
-
 
 ## Step 2: install Homebrew and required packages
 
@@ -36,6 +31,11 @@ And run the `bootstrap.sh` script.
 **Restart your shell after it's done.** 
 
 You can now run `fish_config` to change the terminal colors, abbreviations, etc.
+
+Don't forget to set your git credentials, or you'll be using my details which are in the dotfiles:
+
+    $ git config --global user.name "Kevin Renskers"
+    $ git config --global user.email "kevin@loopwerk.io"
 
 
 ## Step 4: anything else you need
