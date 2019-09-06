@@ -53,6 +53,27 @@ Upgrade pip or setuptools itself:
     $ pip3 install --upgrade setuptools
 
 
+### Ruby
+I'm using rbenv instead of the system Ruby, to prevent annoying permission problems. You should never have to use `sudo` to install gems!
+
+```
+brew install rbenv
+rbenv init
+```
+
+Follow the printed instructions to set up rbenv shell integration. Close your terminal and open a new one so the changes take effect. Then verify that everything is okay:
+
+```
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+```
+
+Now you can install (and then use) a Ruby version, for example:
+
+```
+rbenv install 2.6.4
+rbenv global 2.6.4
+```
+
 ### PostgreSQL
 
     $ brew install postgresql
