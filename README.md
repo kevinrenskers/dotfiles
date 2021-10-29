@@ -1,6 +1,6 @@
 # Mac OS X setup
 
-This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Fish, plus a whole bunch of apps and development tools.
+This is a list of reproducible steps to get a clean Mac (with Apple Silicon) up and running with nice dotfiles for Fish, plus a whole bunch of apps and development tools.
 
 ![Fish theme](screenshot.png)
 
@@ -75,33 +75,7 @@ rbenv global 2.6.4
 
 ### PostgreSQL
 
-    $ brew install postgresql
-    $ initdb /usr/local/var/postgres
-    $ cp /usr/local/Cellar/postgresql/9.2.4/org.postgresql.postgres.plist ~/Library/LaunchAgents/
-    $ launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
-
-To use with Python:
-
-    $ export CFLAGS=-Qunused-arguments
-    $ export CPPFLAGS=-Qunused-arguments
-    $ sudo pip install psycopg2
-
-Or simply download Postgress.app from http://postgresapp.com.
-
-### MySQL
-
-    $ brew install mysql
-    $ brew services start mysql
-    $ mysql_secure_installation
-
-To use with Python:
-
-    $ sudo pip install mysql-python
-
-Manually Starting and stopping the server:
-
-    $ mysql.server start
-    $ mysql.server start
+Simply download Postgress.app from http://postgresapp.com.
 
 ### Node.js and NPM (Node Package Manager)
 
