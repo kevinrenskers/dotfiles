@@ -1,29 +1,27 @@
 # Mac OS X setup
+
 This is a list of reproducible steps to get a clean Mac up and running with nice dotfiles for Fish, plus a whole bunch of apps and development tools.
 
 ![Fish theme](screenshot.png)
 
-
 ## Step 1: ssh keys
-Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
+Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
 ## Step 2: install Homebrew and git
 
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     $ brew analytics off
-    $ brew install git
-
-Alternatively, instead of installing git from Homebrew, you can also install Xcode from the App Store.
 
 ## Step 3: dotfiles
+
 Clone this repository
 
     $ git clone git@github.com:kevinrenskers/dotfiles.git
 
 And run the `bootstrap.sh` script. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything.
 
-**Restart your shell after it's done.** 
+**Restart your shell after it's done.**
 
 You can now run `fish_config` to change the terminal colors, abbreviations, etc.
 
@@ -32,13 +30,14 @@ Don't forget to set your git credentials, or you'll be using my details which ar
     $ git config --global user.name "Kevin Renskers"
     $ git config --global user.email "kevin@loopwerk.io"
 
-
 ## Step 4: anything else you need
 
 ### Keyfixer
+
 [This tool](http://www.starryhope.com/keyfixer/) makes the Home and End keys on your full keyboard a lot better.
 
 ### Python
+
 I'm using [Homebrew's Python](https://docs.brew.sh/Homebrew-and-Python.html).
 
     $ brew install python
@@ -52,8 +51,8 @@ Upgrade pip or setuptools itself:
     $ pip3 install --upgrade pip
     $ pip3 install --upgrade setuptools
 
-
 ### Ruby
+
 I'm using rbenv instead of the system Ruby, to prevent annoying permission problems. You should never have to use `sudo` to install gems!
 
 ```
@@ -89,7 +88,6 @@ To use with Python:
 
 Or simply download Postgress.app from http://postgresapp.com.
 
-
 ### MySQL
 
     $ brew install mysql
@@ -105,7 +103,6 @@ Manually Starting and stopping the server:
     $ mysql.server start
     $ mysql.server start
 
-
 ### Node.js and NPM (Node Package Manager)
 
     $ brew install node
@@ -118,7 +115,6 @@ Once this is installed you can install your favorite packages:
 To update NPM:
 
     $ npm install npm -g
-
 
 ### Nginx
 
@@ -139,8 +135,8 @@ Other commands:
     $ sudo nginx -s stop
     $ sudo nginx -s reload
 
-
 ## Thanks to...
-* Mathias Bynens for sharing [his dotfiles](https://github.com/mathiasbynens/dotfiles), bootstrap script and installation instructions.
-* Michael Moyle for his Nginx/PHP-FPM [installation instructions](http://michaelmoyle.blogspot.com/2013/01/install-php-with-nginx-and-php-fpm.html).
-* Rosco Kalis for sharing [hit dotfiles](https://github.com/rkalis/dotfiles)
+
+- Mathias Bynens for sharing [his dotfiles](https://github.com/mathiasbynens/dotfiles), bootstrap script and installation instructions.
+- Michael Moyle for his Nginx/PHP-FPM [installation instructions](http://michaelmoyle.blogspot.com/2013/01/install-php-with-nginx-and-php-fpm.html).
+- Rosco Kalis for sharing [hit dotfiles](https://github.com/rkalis/dotfiles)

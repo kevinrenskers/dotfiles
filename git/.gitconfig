@@ -102,3 +102,6 @@
 [user]
 	name = Kevin Renskers
 	email = kevin@loopwerk.io
+
+[init]
+	defaultBranch = main
