@@ -19,5 +19,5 @@ find * -name "*.fish" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-sudo bash -c "echo /usr/local/bin/fish >> /etc/shells"
-chsh -s /usr/local/bin/fish
+sudo bash -c "echo /opt/homebrew/bin/fish >> /etc/shells"
+chsh -s /opt/homebrew/bin/fish
