@@ -6,6 +6,7 @@ tap "homebrew/cask"
 
 brew "coreutils"
 brew "fish"
+brew "pygitup"
 
 cask "launchrocket"
 cask "sourcetree"
