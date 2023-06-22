@@ -50,6 +50,8 @@ Upgrade pip or setuptools itself:
 
     $ pip3 install --upgrade pip
     $ pip3 install --upgrade setuptools
+    
+I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, instead of pip, virtualenv, and pyenv.
 
 ### Ruby
 
@@ -79,16 +81,16 @@ Simply download Postgress.app from http://postgresapp.com.
 
 ### Node.js and NPM (Node Package Manager)
 
-    $ brew install node
+I'm using [pnpm](https://pnpm.io) as my Node package manager, and to install specific Node versions.
 
-Once this is installed you can install your favorite packages:
+    $ curl -fsSL https://get.pnpm.io/install.sh | sh -
+    $ pnpm env use --global lts
 
-    $ npm install -g raml2html
-    $ npm install less --save
+Restart your shell and check if everything works: `node --version`.
 
-To update NPM:
+To update pnpm itself:
 
-    $ npm install npm -g
+    $ pnpm add -g pnpm
 
 ### Nginx
 

@@ -53,9 +53,13 @@
 	# git search '#constraint=someMethod,'
 	search = "!f() { git log -S$1 --pretty=oneline --abbrev-commit; }; f"
 
+	# See https://stackoverflow.com/a/32850786/403425   
+	fixup = "!fn() { _FIXUP_COMMIT=`git rev-parse ${1}` && git commit -m \"fixup! ${_FIXUP_COMMIT}\" && GIT_EDITOR=true git rebase --autosquash -i ${_FIXUP_COMMIT}^; }; fn"
+
 [core]
 	excludesfile = ~/.gitignore
 	pager = less -F -X
+	editor = pico
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -105,3 +109,6 @@
 
 [init]
 	defaultBranch = main
+
+[commit]
+	gpgsign = true
