@@ -32,26 +32,46 @@ Don't forget to set your git credentials, or you'll be using my details which ar
 
 ## Step 4: anything else you need
 
-### Keyfixer
-
-[This tool](http://www.starryhope.com/keyfixer/) makes the Home and End keys on your full keyboard a lot better.
-
 ### Python
 
-I'm using [Homebrew's Python](https://docs.brew.sh/Homebrew-and-Python.html).
+I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, together with [pyenv](https://github.com/pyenv/pyenv) to install specific versions of Python. I do not use Homebrew to install Python, nor do I use the system version of Python.
 
-    $ brew install python
+Start by installing pyenv:
 
-A great package to install:
+    $ brew install pyenv
 
-    $ pip3 install git-up
+Then install a Python version, for example 3.10:
 
-Upgrade pip or setuptools itself:
+    $ pyenv install 3.10
+    $ pyenv global 3.10
 
-    $ pip3 install --upgrade pip
-    $ pip3 install --upgrade setuptools
-    
-I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, instead of pip, virtualenv, and pyenv.
+Make sure it works:
+
+    $ which python3
+    $ python3 --version
+
+They should point to the version installed in the `.pyenv` folder and of course match the version you specified. Now we can install Poetry:
+
+    $ curl -sSL https://install.python-poetry.org | python3 -
+
+And to make sure it works:
+
+    $ poetry --version
+
+Some useful settings to enable:
+
+    $ poetry config virtualenvs.in-project true
+    $ poetry config virtualenvs.prefer-active-python true
+
+These settings will make working with location Python versions via pyenv a lot easier, and make it a lot easiet to nuke the `.venv` folder within a project to reinstall your dependencies.
+
+### git up
+
+I love [git up](https://github.com/msiemens/PyGitUp), which updates all local branches with remote changes, by rebasing rather than merging. You just run `git up` in your project and everything is up to date.
+
+After installing Python, you can simply install git up with one command:
+
+    $ pip install git-up
 
 ### Ruby
 

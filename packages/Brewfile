@@ -1,15 +1,1 @@
-cask_args appdir: '/Applications'
-
-tap "homebrew/core"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-
-brew "coreutils"
 brew "fish"
-brew "pygitup"
-
-cask "launchrocket"
-cask "sourcetree"
-cask "steam"
-cask "visual-studio-code"
-cask "vlc"
