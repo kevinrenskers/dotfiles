@@ -63,7 +63,7 @@ Some useful settings to enable:
     $ poetry config virtualenvs.in-project true
     $ poetry config virtualenvs.prefer-active-python true
 
-These settings will make working with location Python versions via pyenv a lot easier, and make it a lot easiet to nuke the `.venv` folder within a project to reinstall your dependencies.
+These settings will make working with local Python versions via pyenv a lot easier, and make it a lot easier to nuke the `.venv` folder within a project to reinstall your dependencies.
 
 ### git up
 
