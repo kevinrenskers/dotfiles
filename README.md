@@ -8,9 +8,15 @@ This is a list of reproducible steps to get a clean Mac (with Apple Silicon) up 
 
 Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
+Make sure they have the right permissions: 
+
+    $ chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
+
 ## Step 2: install Homebrew and git
 
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    $ (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/kevin/.zprofile
+    $ eval "$(/opt/homebrew/bin/brew shellenv)"
     $ brew analytics off
 
 ## Step 3: dotfiles
@@ -34,25 +40,27 @@ Don't forget to set your git credentials, or you'll be using my details which ar
 
 ### Python
 
-I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, together with [pyenv](https://github.com/pyenv/pyenv) to install specific versions of Python. I do not use Homebrew to install Python, nor do I use the system version of Python.
+I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, together with [pyenv](https://github.com/pyenv/pyenv) to install specific versions of Python, and [pipx](https://pipx.pypa.io/) to install and run global tools. I do not use Homebrew to install Python, nor do I use the system version of Python.
 
-Start by installing pyenv:
+Start by installing pyenv and pipx:
 
-    $ brew install pyenv
+    $ brew install pyenv pipx
 
-Then install a Python version, for example 3.10:
+Then install a Python version, for example 3.12:
 
-    $ pyenv install 3.10
-    $ pyenv global 3.10
+    $ pyenv install 3.12
+    $ pyenv global 3.12
 
 Make sure it works:
 
     $ which python3
     $ python3 --version
 
-They should point to the version installed in the `.pyenv` folder and of course match the version you specified. Now we can install Poetry:
+They should point to the version installed in the `.pyenv` folder and of course match the version you specified. 
 
-    $ curl -sSL https://install.python-poetry.org | python3 -
+Now we can install Poetry:
+
+    $ pipx install poetry
 
 And to make sure it works:
 
@@ -69,9 +77,9 @@ These settings will make working with local Python versions via pyenv a lot easi
 
 I love [git up](https://github.com/msiemens/PyGitUp), which updates all local branches with remote changes, by rebasing rather than merging. You just run `git up` in your project and everything is up to date.
 
-After installing Python, you can simply install git up with one command:
+After installing pipx, you can simply install git up with one command:
 
-    $ pip install git-up
+    $ pipx install git-up
 
 ### Ruby
 
@@ -97,7 +105,11 @@ rbenv global 2.6.4
 
 ### PostgreSQL
 
-Simply download Postgress.app from http://postgresapp.com.
+Simply download Postgres.app from http://postgresapp.com. I love [Postico 2](https://eggerapps.at/postico2/) as my database client.
+
+After installing Postgres.app, run the following command to get access to the command line tools:
+
+    sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
 
 ### Node.js and NPM (Node Package Manager)
 
