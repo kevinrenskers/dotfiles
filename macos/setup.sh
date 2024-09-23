@@ -53,6 +53,9 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+# Disable floating preview when taking a screenshot
+defaults write com.apple.screencapture show-thumbnail -bool false
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
