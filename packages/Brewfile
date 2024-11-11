@@ -1,1 +1,3 @@
 brew "fish"
+brew "nano"
+brew "bat"

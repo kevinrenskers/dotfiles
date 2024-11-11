@@ -8,7 +8,7 @@ This is a list of reproducible steps to get a clean Mac (with Apple Silicon) up 
 
 Restore your saved ssh keys or [create a new pair](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
-Make sure they have the right permissions: 
+Make sure they have the right permissions:
 
     $ chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub
 
@@ -40,38 +40,9 @@ Don't forget to set your git credentials, or you'll be using my details which ar
 
 ### Python
 
-I'm using [Poetry](https://python-poetry.org) as the package manager and environment manager for Python projects, together with [pyenv](https://github.com/pyenv/pyenv) to install specific versions of Python, and [pipx](https://pipx.pypa.io/) to install and run global tools. I do not use Homebrew to install Python, nor do I use the system version of Python.
+I'm using [uv](https://docs.astral.sh/uv/) as the Python and package manager for Python projects. I do not use Homebrew to install Python, nor do I use the system version of Python.
 
-Start by installing pyenv and pipx:
-
-    $ brew install pyenv pipx
-
-Then install a Python version, for example 3.12:
-
-    $ pyenv install 3.12
-    $ pyenv global 3.12
-
-Make sure it works:
-
-    $ which python3
-    $ python3 --version
-
-They should point to the version installed in the `.pyenv` folder and of course match the version you specified. 
-
-Now we can install Poetry:
-
-    $ pipx install poetry
-
-And to make sure it works:
-
-    $ poetry --version
-
-Some useful settings to enable:
-
-    $ poetry config virtualenvs.in-project true
-    $ poetry config virtualenvs.prefer-active-python true
-
-These settings will make working with local Python versions via pyenv a lot easier, and make it a lot easier to nuke the `.venv` folder within a project to reinstall your dependencies.
+While uv can install any Python version, these installs are not available globally (i.e. via the `python` command). You need to use `uv run` for one-off scripts or to start a shell (i.e. `uv run python`), or create virtual environments using `uv init`. See https://docs.astral.sh/uv/guides/scripts/#using-different-python-versions for more information.
 
 ### git up
 

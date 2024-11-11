@@ -19,4 +19,5 @@ set -gx PATH "$PNPM_HOME" $PATH
 
 # Aliasses
 alias pico "nano" # nano is just better than pico, it supports syntax highlighting
+alias cat "bat" # bat is a much nicer cat, https://github.com/sharkdp/bat
 alias l "ls -Glaph" # list contents of directory, including hidden files in directory using long format, colorized, appended slash to folders
