@@ -16,3 +16,7 @@ pyenv init - | source
 # pnpm
 set -gx PNPM_HOME $HOME/Library/pnpm
 set -gx PATH "$PNPM_HOME" $PATH
+
+# Aliasses
+alias pico "nano" # nano is just better than pico, it supports syntax highlighting
+alias l "ls -Glaph" # list contents of directory, including hidden files in directory using long format, colorized, appended slash to folders
