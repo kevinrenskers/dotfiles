@@ -48,9 +48,9 @@ While uv can install any Python version, these installs are not available global
 
 I love [git up](https://github.com/msiemens/PyGitUp), which updates all local branches with remote changes, by rebasing rather than merging. You just run `git up` in your project and everything is up to date.
 
-After installing pipx, you can simply install git up with one command:
+After installing uv, you can simply install git up with one command:
 
-    $ pipx install git-up
+    $ uv tool install git-up
 
 ### Ruby
 
