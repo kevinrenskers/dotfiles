@@ -53,8 +53,11 @@
 	# git search '#constraint=someMethod,'
 	search = "!f() { git log -S$1 --pretty=oneline --abbrev-commit; }; f"
 
-	# See https://stackoverflow.com/a/32850786/403425   
+	# See https://stackoverflow.com/a/32850786/403425
 	fixup = "!fn() { _FIXUP_COMMIT=`git rev-parse ${1}` && git commit -m \"fixup! ${_FIXUP_COMMIT}\" && GIT_EDITOR=true git rebase --autosquash -i ${_FIXUP_COMMIT}^; }; fn"
+
+	# A summary of work done
+	summary = "!f() { git log --author=\"$(git config user.email)\" --since=\"${1:-7} days ago\" --no-merges --reverse --pretty=format:\"- %s\"; }; f"
 
 [core]
 	excludesfile = ~/.gitignore
