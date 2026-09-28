@@ -41,3 +41,5 @@ env
 *.ipr
 *.iws
 .idea/
+
+**/.claude/settings.local.json
