@@ -25,3 +25,29 @@ else
     rm "$TMP"
     echo "Added import to the top of $DESTINATION"
 fi
+
+HOOK="\"$(realpath claude-md-self-review.sh)\""
+SETTINGS="$HOME/.claude/settings.json"
+
+[ -f "$SETTINGS" ] || echo '{}' > "$SETTINGS"
+
+if jq -e --arg cmd "$HOOK" '[.hooks.PreToolUse[]?.hooks[]?.command] | index($cmd)' "$SETTINGS" > /dev/null; then
+    echo "Self-review hook already present in $SETTINGS"
+else
+    TMP="$(mktemp)"
+    if jq --arg cmd "$HOOK" '.hooks.PreToolUse += [{
+        matcher: "Bash",
+        hooks: [{
+            type: "command",
+            command: $cmd,
+            statusMessage: "Checking the diff against CLAUDE.md",
+            timeout: 10
+        }]
+    }]' "$SETTINGS" > "$TMP"; then
+        cat "$TMP" > "$SETTINGS"
+        echo "Added self-review hook to $SETTINGS"
+    else
+        echo "Could not add self-review hook to $SETTINGS"
+    fi
+    rm "$TMP"
+fi

@@ -20,9 +20,9 @@ When writing something intended for human consumption (a comment, commit message
 
 ## User-Agent
 
-- My email address may appear in a User-Agent header only for an approved site (list below) whose UA policy explicitly asks for an email address. Never send it to any other site.
-- If an unapproved site's UA policy asks for an email address, ask me whether to approve the site, and hold the request until I do. If I decline or am unavailable, do not make the request.
-- Ad-hoc requests and requests from temporary tools use a UA prefixed with `claude-code/<ver>`, where `<ver>` is the active version for the Claude Code session.
+My email address may appear in a User-Agent header only for an approved site (list below) whose UA policy explicitly asks for an email address. Never send it to any other site. If an unapproved site's UA policy asks for an email address, ask me whether to approve the site, and hold the request until I do. If I decline or am unavailable, do not make the request.
+
+Ad-hoc requests and requests from temporary tools use a UA prefixed with `claude-code/<ver>`, where `<ver>` is the active version for the Claude Code session.
 
 Approved sites (by domain or name):
 
