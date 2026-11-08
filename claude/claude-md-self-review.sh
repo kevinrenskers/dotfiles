@@ -31,16 +31,16 @@ claude_md="$(dirname "$0")/CLAUDE.md"
 
 # Print the section from its heading up to the next one.
 checklist=$(awk '
-  /^## / {
+  /^##+ / {
     if (inside) exit
-    if ($0 == "## Self-review before committing") inside = 1
+    if ($0 == "### Self-review before committing") inside = 1
   }
   inside { print }
 ' "$claude_md")
 
 # Nothing but the heading means the section was renamed or removed.
 if [ "$(printf '%s\n' "$checklist" | wc -l)" -le 1 ]; then
-  emit "$FALLBACK" "Self-review hook: no '## Self-review before committing' section in $claude_md — it was renamed or removed, so the hook is falling back to a generic reminder instead of the real checklist. Fix the heading or update $0."
+  emit "$FALLBACK" "Self-review hook: no '### Self-review before committing' section in $claude_md — it was renamed or removed, so the hook is falling back to a generic reminder instead of the real checklist. Fix the heading or update $0."
 fi
 
 emit "$checklist"
