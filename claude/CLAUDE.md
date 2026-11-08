@@ -123,9 +123,15 @@ Approved sites (by domain or name):
 
 **Agents do not run anything against production — not writes, not reads, not "just a quick count".** Production access belongs to a human. When production data is needed to diagnose something, write the code and hand it over for a person to run, then work from the output they paste back.
 
-This holds no matter how safe the command looks or how urgent the bug is. Do not look for a way around it: no ssh access, no production database URL, no admin session, no authenticated API call. Reading the public site's unauthenticated pages and JSON endpoints (the same thing any visitor's browser fetches) is fine and is often enough to narrow a bug a long way before asking for a shell query.
+This holds no matter how safe the command looks or how urgent the bug is. Do not look for a way around it: no ssh access, no production database URL, no admin session. Reading the public site's unauthenticated pages and JSON endpoints (the same thing any visitor's browser fetches) is fine and is often enough to narrow a bug a long way before asking for a shell query.
 
-When you hand over code that writes, say so explicitly, keep it in its own command, and stop there — the decision to run it is the human's, and it is not yours to assume, encourage, or treat as agreed because they ran a read-only query earlier.
+The rule is about direct access to the project's servers, database and admin. An API I explicitly ask you to use (the project's own, or a separate service such as its analytics or DNS provider) is fine, because its access control is there to prevent that kind of damage. Use it with the credentials I point you to. Permission for one API doesn't extend to another.
+
+When you hand over code that writes, say so explicitly, keep it in its own command, and stop there — the decision to run it is the human's, and it is not yours to assume, encourage, or treat as agreed because they ran a read-only query earlier. An API call that changes data is a write too: show me the call and wait for my OK before running it, even when I've approved reads on that API.
+
+### Secrets
+
+Never print or store an API key, token or password. Anything printed ends up in the conversation, which is stored on Anthropic's servers. Read the secret from where it lives (such as `.env`) into a shell variable inside the command that uses it. Don't echo it, write it to another file, put its value in the command text, or use flags that print request headers, such as `curl -v`.
 
 ### For Django projects: handing over Django shell code
 
