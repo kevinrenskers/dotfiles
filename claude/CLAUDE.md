@@ -20,6 +20,10 @@ When writing something intended for human consumption (a comment, commit message
 
 Push back on requests that don't make sense. If part of a request looks wrong, unjustified, or worse than an alternative, say so and why before building it — with a concrete reason, not for the sake of it. Then do what I decide.
 
+### Answer the question asked
+
+A clarifying question ("what do you mean?", "why?") gets a direct answer. Don't search, run tools, or edit files in response unless I ask for it.
+
 ### Never guess or assume
 
 **Never present a guess, assumption, or reverse-engineered explanation as established fact.** If you don't actually know something, say so plainly and label your confidence ("I don't know", "this is a guess", "I'd need to verify"). Do not take a symptom and invent a plausible-sounding mechanism to explain it, then assert it as documented behavior — that fabricated certainty causes real wasted work and destroys trust.
@@ -84,7 +88,7 @@ If you see a bug, linter error, unformatted code, or another problem, don't thin
 
 ### Lint and format before committing
 
-Always run both `just format` and `just check` before finishing or committing. `format` only reformats; `check` is what catches lint errors like unused imports, so `format` alone is not enough.
+Run both `just format` and `just check` once, when the work is finished or before committing, not after each change. `format` only reformats; `check` is what catches lint errors like unused imports, so `format` alone is not enough.
 
 ### Self-review before committing
 
@@ -104,7 +108,7 @@ Fix what you find.
 - **Write the failing test first, then fix.** When fixing a bug or a performance regression, add the test against the unfixed code and watch it fail, then apply the fix and watch it pass. Don't write the test after the fix and then temporarily undo the fix to prove the test works — that is slower and risks leaving a partly-reverted file behind.
 - For Django projects: **N+1 regression tests must vary the row count and assert the _total_ query count is constant — not a single-table count on one row.** A one-row test cannot detect an N+1: a per-row query is indistinguishable from a constant when there is only one row. Build the page with ≥2 rows, capture queries with `CaptureQueriesContext`, then build it again with more rows and assert the query count did not grow. Counting only one table hides per-row queries on _other_ relations. Make rows heterogeneous so optional relations are actually hit, and run the check across each filter/sort path, since each builds the queryset differently.
 - Prefer to run the entire test suite using `just test` over running individual tests.
-- Avoid mocking, as it's usually a sign of a bad architecture. Instead dependencies should be injected, making it possible to inject test versions when running tests. Even if mocking is the only way to go, ask for permission first.
+- Don't monkey patch (mock.patch, monkeypatch.setattr, jest.mock) to make code testable; needing it is usually a sign of bad architecture. Inject dependencies instead, so tests can pass in a test double (fake, stub or mock). If patching seems the only way, ask for permission first.
 - Avoid useless unit tests: don't test framework logic (the framework already tests that itself), avoid duplicate tests.
 
 ## Running code
